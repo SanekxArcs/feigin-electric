@@ -28,7 +28,7 @@ export default function ScrollToTopButton() {
 
   return (
     <button
-      className={`scroltop style1 white icon-up fixed bottom-4 right-4 p-2 rounded-full bg-white shadow-lg ${isVisible ? "block" : "hidden"}`}
+      className={`ring-1 ring-primary hover:ring-2 hover:shadow-primary transition-all  fixed bottom-2 right-3 p-2 rounded-full bg-white shadow-lg ${isVisible ? "block" : "hidden"}`}
       type="button"
       onClick={scrollToTop}
     >

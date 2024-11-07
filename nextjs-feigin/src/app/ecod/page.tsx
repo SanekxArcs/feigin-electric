@@ -11,53 +11,59 @@ import {
   Bolt
 } from "lucide-react";
 import Image from "next/image";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 
 export default function Ecod() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-12 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold">ECOD Smart Optimizer</h1>
-            <p className="mt-4 text-lg">
+       <div className="container mx-auto space-y-10 p-6">
+      {/* Hero Section */}
+      <section className="inner-hero bg-gray-100 text-center py-10">
+        <Card>
+          <CardHeader className="text-center">
+            <h1 className="text-3xl font-semibold">
+              ECOD Smart Optimizer
+            </h1>
+            <p className="mt-2">
               Optimize Your Energy. Extend Lifespan. Save Costs.
             </p>
-          </div>
-        </div>
+          </CardHeader>
+        </Card>
       </section>
 
       {/* Product Overview */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold">
+      <section className="product-overview bg-white py-10">
+        <Card className="text-center">
+          <CardHeader>
+            <h2  className="text-2xl font-semibold">
               Revolutionary Energy Optimization
             </h2>
-            <p className="mt-4 text-lg">
+          </CardHeader>
+          <CardContent>
+            <p className="mt-2">
               The Ecod Smart Optimizer reduces energy consumption by maintaining
               the voltage at the optimal level, saving{" "}
               <span className="font-semibold">6-14%</span> on electricity bills.
             </p>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </section>
 
       {/* Product Features */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="md:flex md:items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold">
-                Saves 6-14% on <br />
-                Energy Bills
-              </h2>
-              <p className="mt-4 text-lg">
-                Cut down your electricity costs by 6-14%. The Ecod Smart
-                Optimizer helps you maintain optimal voltage levels, ensuring
-                efficient energy use without compromising performance.
-              </p>
-            </div>
+            <div className="text-wrapper">
+            <h2 className="text-xl font-semibold">
+              Saves 6-14% on <br /> Energy Bills
+            </h2>
+            <p className="mt-2">
+              Cut down your electricity costs by 6-14%. The Ecod Smart Optimizer
+              helps you maintain optimal voltage levels, ensuring efficient
+              energy use without compromising performance.
+            </p>
+          </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
               <Image
                 src="https://feiginelectric.com/wp-content/themes/ecnology/images/ecod/ecod-product.png"
@@ -499,6 +505,7 @@ export default function Ecod() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }
