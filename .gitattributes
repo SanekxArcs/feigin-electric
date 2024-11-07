@@ -1,2 +1,63 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Node modules
+node_modules/
+nextjs-feigin/node_modules/
+nextjs-feigin/.next/
+nextjs-feigin/.out/
+nextjs-feigin/.env
+studio-feigin/node_modules/
+studio-feigin/.sanity/
+studio-feigin/.env
+studio-feigin/dist
+
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Build directories
+dist/
+build/
+.out/
+.next/
+
+# Coverage directories
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# TypeScript
+*.tsbuildinfo
+
+# Miscellaneous
+*.pem
+*.lock
+*.swp
