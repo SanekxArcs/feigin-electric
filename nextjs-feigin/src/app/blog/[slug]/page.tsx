@@ -1,14 +1,14 @@
 // pages/[slug].tsx
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { client } from "../sanity";
-import { Card } from "@components/ui/card";
-import { Typography } from "@components/ui/typography";
+import { client } from "../../../sanity";
+import {Card} from "../../../components/ui/card";
+import Typography from "../../../components/ui/typography";
 
 interface Post {
   _id: string;
   title: string;
-  body: any;
+  body: string;
   mainImage: { asset: { url: string } };
   publishedAt: string;
 }
@@ -21,7 +21,7 @@ export default function Post({ post }: { post: Post }) {
   }
 
   return (
-    <main className="container mx-auto min-h-screen max-w-3xl p-8">
+    <main className="container mx-auto min-h-screen  p-8">
       <Card>
         <Typography variant="h1" className="mb-4">
           {post.title}
