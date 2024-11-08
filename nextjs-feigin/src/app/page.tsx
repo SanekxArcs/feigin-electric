@@ -7,6 +7,7 @@ import UnleashedVoltageSvg from "./assets/napkin-selection (1).svg";
 import separatorSvg from "./assets/layered-waves-haikei.svg";
 import ECODSmartOptimizer from "./assets//WhatsApp Image 2023-11-14 at 19.35.55.png";
 import Image from "next/image";
+import ScrollingLogos from "./components/ScrollingLogos";
 
 const Home = () => {
   return (
@@ -33,27 +34,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="w-screen ">
-        <div className="w-full">
-          <Image src={separatorSvg} alt="" className="w-full" />
-        </div>
-      </section>
-      <div className="bg-red-600">
-        <div className="bg-red-600">
-          <div className="relative flex items-center justify-center w-full overflow-hidden">
-            <div className="flex animate-scroll-left hover:animation-play-state-paused">
-              {/* Add more logos as needed */}
-            </div>
-            <div className="absolute inset-y-0 left-0 w-24 pointer-events-none bg-gradient-to-r from-red-600"></div>
-            <div className="absolute inset-y-0 right-0 w-24 pointer-events-none bg-gradient-to-l from-red-600"></div>
-          </div>
-        </div>
-      </div>
-      <section className="w-screen ">
-        <div className="w-full rotate-180">
-          <Image src={separatorSvg} alt="" className="w-full" />
-        </div>
-      </section>
+       <ScrollingLogos/>
+
       <section className="flex flex-row items-center justify-center gap-10 py-32">
         <div className="w-1/2 text-left">
           <h2 className="mb-5 text-5xl font-bold">Unleashed Voltage</h2>

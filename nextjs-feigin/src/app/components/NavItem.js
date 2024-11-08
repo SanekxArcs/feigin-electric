@@ -7,7 +7,6 @@ export default function NavItem({ href, label }) {
   const pathname = usePathname();
 
   return (
-    <li>
       <Button
         variant="link"
         className={`hover:text-fgreen-800 font-bold
@@ -18,6 +17,5 @@ export default function NavItem({ href, label }) {
           {label}
         </TransitionLink>
       </Button>
-    </li>
   );
 }

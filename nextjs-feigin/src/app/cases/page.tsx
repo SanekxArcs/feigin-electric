@@ -1,8 +1,11 @@
 import Image from "next/image";
+import PageTopSection from "../components/PageTopSection";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 function CaseCard({ title, imageSrc, pdfLink }) {
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="relative bg-white shadow-md rounded-lg overflow-hidden group hover:-translate-y-1 transition-all hover:shadow-xl">
       <Image
         src={imageSrc}
         alt={title}
@@ -10,14 +13,11 @@ function CaseCard({ title, imageSrc, pdfLink }) {
         height={300}
         className="w-full"
       />
-      <div className="p-4">
-        <p className="text-lg font-semibold">{title}</p>
-        <a
-          href={pdfLink}
-          download
-          className="mt-2 inline-block text-blue-600 hover:underline"
-        >
-          Download PDF
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent p-4 transition-all opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 grid place-content-center">
+        <a href={pdfLink} download>
+          <Button className="text-lg font-semibold text-fred-50 text-balance">
+            {title} Download PDF <Download />
+          </Button>
         </a>
       </div>
     </div>
@@ -94,19 +94,13 @@ export default function CaseStudies() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-12 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold">Case Studies</h1>
-            <p className="mt-4 text-lg">
-              We've worked for great companies. We offer a full range of
+      <PageTopSection
+        title="Case Studies"
+        description="We've worked for great companies. We offer a full range of
               products for supermarkets, convenience stores, hotels, fast food
               restaurant chains, factories through our ECOD model line, and
-              according to individual needs.
-            </p>
-          </div>
-        </div>
-      </section>
+              according to individual needs."
+      />
 
       {/* Case Studies Section */}
       <section className="py-12">

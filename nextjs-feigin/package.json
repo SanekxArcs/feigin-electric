@@ -44,6 +44,7 @@
     "react-dom": "19.0.0-rc-02c0e824-20241028",
     "react-resizable-panels": "^2.1.6",
     "recharts": "^2.13.3",
+    "sanity": "^3.63.0",
     "sonner": "^1.7.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
