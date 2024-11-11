@@ -5,11 +5,17 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const interFont = localFont({
+  src: "./fonts/InterVariable.woff2",
+  variable: "--font-inter",
   weight: "100 900",
-  fallback: ["Inter", "Helvetica", "sans-serif"],
+  fallback: ["Helvetica", "sans-serif"],
+});
+const interItalic = localFont({
+  src: "./fonts/InterVariable-Italic.woff2",
+  variable: "--font-inter-italic",
+  weight: "100 900",
+  fallback: [ "Helvetica", "sans-serif"],
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -17,6 +23,7 @@ const geistMono = localFont({
   weight: "100 900",
   fallback: ["Inter", "Helvetica", "sans-serif"],
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,19 +45,19 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <Header />
         <main>{children}</main>
-
         <Footer />
         <ScrollToTopButton />
       </body>

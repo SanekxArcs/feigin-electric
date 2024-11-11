@@ -3,6 +3,10 @@
 import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
 
+const plLang = { 
+  
+}
+
 const About = () => {
   return (
     <div className="bg-white">

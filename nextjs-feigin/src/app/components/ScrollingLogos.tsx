@@ -4,6 +4,7 @@ import path from "path";
 import fs from "fs";
 import ScrollingLogosClient from "./ScrollingLogosClient";
 import separatorSvg from "../assets/layered-waves-haikei.svg";
+import Image from "next/image";
 
 const ScrollingLogos = () => {
   const logosDir = path.join(process.cwd(), "public", "logos");
@@ -15,7 +16,7 @@ const ScrollingLogos = () => {
       {/* Top Separator */}
       <section className="w-screen">
         <div className="w-full">
-          <img src={separatorSvg} alt="" className="w-full" />
+          <Image src={separatorSvg} alt="" className="w-full" />
         </div>
       </section>
 
@@ -25,7 +26,7 @@ const ScrollingLogos = () => {
       {/* Bottom Separator */}
       <section className="w-screen">
         <div className="w-full rotate-180">
-          <img src={separatorSvg} alt="" className="w-full" />
+          <Image src={separatorSvg} alt="" className="w-full" />
         </div>
       </section>
     </>

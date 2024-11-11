@@ -40,15 +40,15 @@ const ScrollingLogosClient: React.FC<ScrollingLogosClientProps> = ({
   };
 
   const logosRow = (
-    <div className="flex space-x-8">
+    <div className="flex space-x-8 gap-20 drop-shadow-md ">
       {logos.map((logo, index) => (
-        <motion.div key={index} whileHover={{ scale: 1.01 }}>
+        <motion.div className="" key={index} whileHover={{ scale: 1.01 }}>
           <Image
             src={logo}
             alt={`Logo ${index + 1}`}
-            width={100}
-            height={100}
-            className="h-16 w-auto object-contain"
+            width={150}
+            height={150}
+            className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
           />
         </motion.div>
       ))}
@@ -70,7 +70,6 @@ const ScrollingLogosClient: React.FC<ScrollingLogosClientProps> = ({
         >
           {logosRow}
         </motion.div>
-        {/* Gradient Overlays */}
         <div className="absolute inset-y-0 left-0 w-24 pointer-events-none bg-gradient-to-r from-red-600"></div>
         <div className="absolute inset-y-0 right-0 w-24 pointer-events-none bg-gradient-to-l from-red-600"></div>
       </div>
