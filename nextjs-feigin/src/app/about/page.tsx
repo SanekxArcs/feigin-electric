@@ -52,7 +52,7 @@ const About = () => {
               Establishing a laboratory for component testing and analysis was
               the next logical step in developing an optimization device which,
               through a number of improvements and model updates, resulted in
-              today's patented technology and ECOD model line.
+              today&apos;s patented technology and ECOD model line.
             </p>
           </div>
           {/* Card 2 */}
@@ -83,8 +83,8 @@ const About = () => {
               Our customers include factories, production lines, hotels, petrol
               stations, counties, fast-food restaurant chains, and power
               distributors with names such as: <br /> Burger King, KFC,
-              McDonald's, The Pizza Company, Lion Group, Chester's Grill, Pizza
-              Hut, Sturgeon Farm Hua Hin Thailand, Domino's Pizza, and
+              McDonald&apos;s, The Pizza Company, Lion Group, Chester&apos;s Grill, Pizza
+              Hut, Sturgeon Farm Hua Hin Thailand, Domino&apos;s Pizza, and
               BreadTalk, just to name a few.
             </p>
           </div>

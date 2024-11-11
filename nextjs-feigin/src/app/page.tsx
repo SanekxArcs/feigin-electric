@@ -4,7 +4,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import UnleashedVoltageSvg from "./assets/napkin-selection (1).svg";
-import separatorSvg from "./assets/layered-waves-haikei.svg";
 import ECODSmartOptimizer from "./assets//WhatsApp Image 2023-11-14 at 19.35.55.png";
 import Image from "next/image";
 import ScrollingLogos from "./components/ScrollingLogos";

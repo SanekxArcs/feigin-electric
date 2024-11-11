@@ -187,7 +187,7 @@ export default function Contact() {
                         className="sr-only"
                         id="Option1"
                         type="radio"
-                        tabIndex="-1"
+                        tabIndex={-1}
                         name="option"
                       />
 
@@ -199,13 +199,13 @@ export default function Contact() {
                     <label
                       htmlFor="Option2"
                       className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                      tabIndex="0"
+                      tabIndex={0}
                     >
                       <input
                         className="sr-only"
                         id="Option2"
                         type="radio"
-                        tabIndex="-1"
+                        tabIndex={-1}
                         name="option"
                       />
 
@@ -217,13 +217,13 @@ export default function Contact() {
                     <label
                       htmlFor="Option3"
                       className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black has-[:checked]:border-black has-[:checked]:bg-black has-[:checked]:text-white"
-                      tabIndex="0"
+                      tabIndex={0}
                     >
                       <input
                         className="sr-only"
                         id="Option3"
                         type="radio"
-                        tabIndex="-1"
+                        tabIndex={-1}
                         name="option"
                       />
 

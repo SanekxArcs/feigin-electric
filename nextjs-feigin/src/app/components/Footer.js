@@ -1,6 +1,4 @@
-// components/Footer.jsx
-
-import Image from "next/image";
+// components/Footer.js
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

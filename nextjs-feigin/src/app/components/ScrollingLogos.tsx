@@ -1,110 +1,31 @@
-"use client";
-import React, { useEffect } from "react";
-import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
+// ScrollingLogos.tsx
+import React from "react";
+import path from "path";
+import fs from "fs";
+import ScrollingLogosClient from "./ScrollingLogosClient";
 import separatorSvg from "../assets/layered-waves-haikei.svg";
 
-// Automatically import all images from the logos directory
-const logos = [];
-
-function importAll(r) {
-  r.keys().forEach((key) => logos.push(r(key).default));
-}
-importAll(require.context("../assets/logos", false, /\.(png|jpe?g|svg|webp)$/));
-
 const ScrollingLogos = () => {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start("animate");
-  }, [controls]);
-
-  const handleMouseEnter = () => {
-    controls.stop();
-  };
-
-  const handleMouseLeave = () => {
-    controls.start("animate");
-  };
-
-  const marqueeVariants = {
-    animate: {
-      x: ["0%", "-50%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 20,
-          ease: "linear",
-        },
-      },
-    },
-  };
-
-  const logosRow = (
-    <div className="flex space-x-8">
-      {logos.map((logo, index) => (
-        <motion.div key={index} whileHover={{ scale: 1.01 }}>
-          <Image
-            src={logo}
-            alt={`Logo ${index + 1}`}
-            width={100}
-            height={100}
-            className="h-16 w-auto object-contain"
-          />
-        </motion.div>
-      ))}
-    </div>
-  );
+  const logosDir = path.join(process.cwd(), "public", "logos");
+  const files = fs.readdirSync(logosDir);
+  const logos = files.map((file) => `/logos/${file}`);
 
   return (
     <>
       {/* Top Separator */}
       <section className="w-screen">
         <div className="w-full">
-          <Image
-            src={separatorSvg}
-            alt=""
-            className="w-full"
-            width={0}
-            height={0}
-            priority
-          />
+          <img src={separatorSvg} alt="" className="w-full" />
         </div>
       </section>
 
       {/* Scrolling Logos */}
-      <div className="bg-red-600 overflow-hidden">
-        <div
-          className="relative flex items-center"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <motion.div
-            className="flex"
-            variants={marqueeVariants}
-            animate={controls}
-            initial="animate"
-          >
-            {logosRow}
-          </motion.div>
-          {/* Gradient Overlays */}
-          <div className="absolute inset-y-0 left-0 w-24 pointer-events-none bg-gradient-to-r from-red-600"></div>
-          <div className="absolute inset-y-0 right-0 w-24 pointer-events-none bg-gradient-to-l from-red-600"></div>
-        </div>
-      </div>
+      <ScrollingLogosClient logos={logos} />
 
       {/* Bottom Separator */}
       <section className="w-screen">
         <div className="w-full rotate-180">
-          <Image
-            src={separatorSvg}
-            alt=""
-            className="w-full"
-            width={0}
-            height={0}
-            priority
-          />
+          <img src={separatorSvg} alt="" className="w-full" />
         </div>
       </section>
     </>

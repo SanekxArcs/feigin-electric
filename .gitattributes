@@ -3,7 +3,6 @@
 # Node modules
 node_modules/
 nextjs-feigin/node_modules/
-nextjs-feigin/.next/
 nextjs-feigin/.out/
 nextjs-feigin/.env
 studio-feigin/node_modules/

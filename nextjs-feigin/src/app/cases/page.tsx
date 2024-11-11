@@ -3,7 +3,13 @@ import PageTopSection from "../components/PageTopSection";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
-function CaseCard({ title, imageSrc, pdfLink }) {
+interface CaseCardProps {
+  title: string;
+  imageSrc: string;
+  pdfLink: string;
+}
+
+function CaseCard({ title, imageSrc, pdfLink }: CaseCardProps) {
   return (
     <div className="relative bg-white shadow-md rounded-lg overflow-hidden group hover:-translate-y-1 transition-all hover:shadow-xl">
       <Image
