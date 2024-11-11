@@ -2,6 +2,7 @@ import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 interface CaseCardProps {
   title: string;
@@ -17,14 +18,14 @@ function CaseCard({ title, imageSrc, pdfLink }: CaseCardProps) {
         alt={title}
         width={500}
         height={300}
-        className="w-full"
+        className="w-full h-48 md:h-56 object-cover"
       />
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent p-4 transition-all opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 grid place-content-center">
-        <a href={pdfLink} download>
-          <Button className="text-lg font-semibold text-fred-50 text-balance">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent p-4 transition-all opacity-100 group-hover:opacity-100 translate-y-0 grid place-content-center md:opacity-0 md:group-hover:opacity-100 md:translate-y-5 md:group-hover:translate-y-0">
+        <Link href={pdfLink} download>
+          <Button className="text-xs sm:text-sm font-medium text-fred-50 text-balance">
             {title} Download PDF <Download />
           </Button>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -109,9 +110,9 @@ export default function CaseStudies() {
       />
 
       {/* Case Studies Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-8">
+        <div className="container mx-auto px-2 md:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {caseStudies.map((study, index) => (
               <CaseCard
                 key={index}

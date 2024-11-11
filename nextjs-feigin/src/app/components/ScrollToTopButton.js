@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
@@ -6,17 +6,12 @@ export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const handleScroll = () => {
+      setIsVisible(window.pageYOffset > 300);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
@@ -28,11 +23,12 @@ export default function ScrollToTopButton() {
 
   return (
     <button
-      className={`ring-1 ring-primary hover:ring-2 hover:shadow-primary transition-all  fixed bottom-2 right-3 p-2 rounded-full bg-white shadow-lg ${isVisible ? "block" : "hidden"}`}
+      className={`ring-1 ring-primary hover:ring-2 hover:shadow-primary transition-all fixed bottom-4 right-4 md:bottom-8 md:right-8 p-3 rounded-full bg-white shadow-lg ${isVisible ? "flex" : "hidden"} items-center justify-center`}
       type="button"
       onClick={scrollToTop}
+      aria-label="Scroll to top"
     >
-        <ArrowUp/>
+      <ArrowUp size={24} />
     </button>
   );
 }

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
@@ -27,8 +26,8 @@ export default async function IndexPage() {
         title="Blog"
         description="Read our latest blog posts. Our vision, mission, success and many other you might love."
       />
-      <main className="container mx-auto min-h-screen p-8">
-        <ul className="grid gap-4 grid-cols-3">
+      <main className="container mx-auto min-h-screen p-4 md:p-8">
+        <ul className="grid gap-4 grid-cols-1 md:grid-cols-3">
           {posts.map((post) => (
             <li key={post._id}>
               <Link href={`/${post.slug.current}`}>
