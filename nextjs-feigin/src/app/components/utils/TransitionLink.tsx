@@ -1,6 +1,8 @@
 "use client";
+
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
+import React from "react"; // Import React types to ensure everything is properly typed
 
 interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
@@ -23,14 +25,22 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
   ) => {
     e.preventDefault();
 
+    // Ensure you have a 'main' element for the body selector to apply transitions.
     const body = document.querySelector("main");
-    body?.classList.add("page-transition");
+    if (body) {
+      body.classList.add("page-transition");
 
-    await sleep(200);
-    router.push(href);
-    await sleep(200);
+      // Wait for the page transition to complete
+      await sleep(200);
 
-    body?.classList.remove("page-transition");
+      // Push the new route
+      router.push(href);
+
+      // Wait for the next animation step (if needed)
+      await sleep(200);
+
+      body.classList.remove("page-transition");
+    }
   };
 
   return (

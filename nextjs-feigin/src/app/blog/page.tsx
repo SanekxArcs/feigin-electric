@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/client";
 import { Image } from "next-sanity/image";
 import PageTopSection from "../components/PageTopSection";
+import { title } from "process";
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -20,11 +21,17 @@ export default async function IndexPage() {
   function urlFor(asset: any) {
     return builder.image(asset);
   }
+
+  const plLang = {
+    title: "Blog",
+    description:
+      "Przeczytaj nasze najnowsze wpisy na blogu. Nasza wizja, misja, sukces i wiele innych, które mogą Ci się spodobać.",
+  };
   return (
     <>
       <PageTopSection
-        title="Blog"
-        description="Read our latest blog posts. Our vision, mission, success and many other you might love."
+        title={plLang.title}
+        description={plLang.description}
       />
       <main className="container mx-auto min-h-screen p-4 md:p-8">
         <ul className="grid gap-4 grid-cols-1 md:grid-cols-3">

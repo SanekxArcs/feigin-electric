@@ -8,6 +8,9 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
     extend: {
       colors: {
         fred: {
@@ -83,7 +86,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "gradientShift": {
+        gradientShift: {
           "0%": {
             backgroundPosition: "0% 50%",
           },
@@ -121,12 +124,12 @@ const config: Config = {
         padding: "1rem",
         screens: {
           xxs: "320px",
-          xs: "375px",
-          sm: "425px",
+          xs: "425px",
+          sm: "640px",
           md: "768px",
           lg: "1024px",
           xl: "1280px",
-          "2xl": "1440px",
+          "2xl": "1536px",
         },
       },
     },

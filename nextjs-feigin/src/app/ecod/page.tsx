@@ -13,14 +13,24 @@ import {
 import Image from "next/image";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import PageTopSection from "../components/PageTopSection";
+import ECODSection from "../ecod/ECODSection";
+import SectionTwo from "../ecod/SectionTwo";
 
 export default function Ecod() {
+
+  const plLang = {
+    title: "ECOD Smart Optimizer",
+    description: "Optymalizuj swoją energię. Wydłuż żywotność. Oszczędzaj koszty.",
+  }
   return (
     <><PageTopSection
-          title="ECOD Smart Optimizer"
-          description="Optimize Your Energy. Extend Lifespan. Save Costs."
+          title={plLang.title}
+          description={plLang.description}
         />
       {/* Hero Section */}
+
+      <ECODSection/>
+      <SectionTwo/>
       <div className="container mx-auto">
         {/* Hero Section */}
         

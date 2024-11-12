@@ -20,7 +20,7 @@ const navItems = [
 ];
 
 const plLang = {
-  ctaButton: "Monitorowanie Online",
+  ctaButton: "Monitoring Online",
 };
 
 export default function Header() {
@@ -55,9 +55,12 @@ export default function Header() {
               ))}
             </ul>
             <Link href="https://ems.feiginelectric.com/">
-              <Button className="bg-fgreen-600 px-5 py-3 text-white font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2">
-                <MonitorCog className="mr-2" />
-                {plLang.ctaButton}
+              <Button
+                variant="outline"
+                className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
+              >
+                <MonitorCog className="mr-2 md:mr-0" />
+                <span className="md:hidden xl:block">{plLang.ctaButton}</span>
               </Button>
             </Link>
           </nav>
@@ -67,9 +70,12 @@ export default function Header() {
             {/* 'Online Monitoring' Button visible on md screens and above */}
             <div className="hidden md:block">
               <Link href="https://ems.feiginelectric.com/">
-                <Button className="bg-fgreen-600 px-4 py-2 text-white font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2">
+                <Button
+                  variant="outline"
+                  className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
+                >
                   <MonitorCog className="mr-2" />
-                  {plLang.ctaButton}
+                  <span className="">{plLang.ctaButton}</span>
                 </Button>
               </Link>
             </div>
@@ -98,22 +104,31 @@ export default function Header() {
             transition={{ duration: 0.5 }}
             className="lg:hidden overflow-hidden"
           >
-            <nav className="px-4 pt-4 pb-6 space-y-2 flex flex-col">
+            <nav className="px-4 pt-4 pb-6 space-y-2 flex flex-col justify-center">
               {navItems.map((item) => (
-                <NavItem
+                <div
+                  className="mx-auto"
                   key={item.href}
-                  href={item.href}
-                  label={item.label.pl}
-                  className="block px-4 py-2 rounded-md text-lg font-medium text-gray-800 hover:bg-gray-200"
                   onClick={() => setIsMobileMenuOpen(false)}
-                />
+                >
+                  <NavItem
+                    href={item.href}
+                    label={item.label.pl}
+                    className="block px-4 py-2 rounded-md text-lg font-medium text-gray-800 hover:bg-gray-200"
+                  />
+                </div>
               ))}
               {/* 'Online Monitoring' Button visible on small screens within the mobile menu */}
-              <div className="mt-4 flex justify-center">
+              <div className="mt-4 md:hidden flex justify-center">
                 <Link href="https://ems.feiginelectric.com/">
-                  <Button className="bg-fgreen-600 px-5 py-3 text-white font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2">
+                  <Button
+                    variant="outline"
+                    className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
+                  >
                     <MonitorCog className="mr-2" />
-                    {plLang.ctaButton}
+                    <span className="">
+                      {plLang.ctaButton}
+                    </span>
                   </Button>
                 </Link>
               </div>
