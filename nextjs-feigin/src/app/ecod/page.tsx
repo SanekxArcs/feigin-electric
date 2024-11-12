@@ -12,7 +12,6 @@ import CertificatesSection from "./CertificatesSection";
 import ProductLineSection from "./ProductLineSection";
 import MaintenanceSection from "./MaintenanceSection";
 import ComparisonBenefitsSection from "./ComparisonBenefitsSection";
-import WorkingPrincipleSectionTwo from "./WorkingPrincipleSectiontwo";
 import ComparisonChartsSection from "./ComparisonChartsSection";
 import ProductBenefitsSection from "./ProductBenefitsSection";
 import CallToActionSection from "../homecomponents/CallToActionSection";
@@ -38,11 +37,10 @@ export default function Ecod() {
       <MaintenanceSection/>
 
       <PhotovoltaicsPerformanceSection/>
-      <ComparisonChartsSection/>
       <EcodSummaryPhotovoltaics/>
-      
       <ComparisonBenefitsSection/>
-      <WorkingPrincipleSectionTwo/>
+      <ComparisonChartsSection/>
+      
 
       <EcodMonitoringPlatform/>
       <CertificatesSection/>

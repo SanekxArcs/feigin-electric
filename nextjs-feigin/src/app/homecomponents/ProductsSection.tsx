@@ -2,9 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import ECODSmartOptimizer from "../assets/WhatsApp Image 2023-11-14 at 19.35.55.png";
 import Acrel from "../assets/wireless-electricity-monitor.webp";
+import { TransitionLink } from "../components/utils/TransitionLink";
 
 const plLang = {
   title: "Nasze Produkty",
@@ -85,12 +85,12 @@ const ProductsSection = () => {
                 <li key={index}>{feature}</li>
               ))}
             </ul>
-            <Link href="/ecod">
+            <TransitionLink href="/ecod">
               <Button className="bg-red-400 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600 px-4 py-2 md:px-6 md:py-3">
                 {plLang.products.Ecod.button}
                 <ChevronRight />
               </Button>
-            </Link>
+            </TransitionLink>
           </div>
         </div>
 
@@ -114,11 +114,11 @@ const ProductsSection = () => {
                 <li key={index}>{feature}</li>
               ))}
             </ul>
-            <Link href="/acrel">
+            <TransitionLink href="/acrel">
               <Button className="bg-red-400 px-4 py-2 md:px-6 md:py-3 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600">
                 {plLang.products.Acrel.button} <ChevronRight />
               </Button>
-            </Link>
+            </TransitionLink>
           </div>
           <div className="md:w-1/2 w-full mt-6 md:mt-0">
             <Image

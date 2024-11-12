@@ -50,6 +50,7 @@ const WorkingPrincipleSection = () => {
             <h3 className="text-lg text-gray-700 font-medium">Sprawność</h3>
             <p className="text-gray-700">
               Na przykładzie klimatyzatorów:
+              </p>
               <ul className="list-disc list-inside mt-2">
                 <li>
                   <span className="text-blue-600 font-bold">Seria 1</span> -
@@ -68,7 +69,7 @@ const WorkingPrincipleSection = () => {
                   wentylator wewnętrzny
                 </li>
               </ul>
-            </p>
+            
           </div>
           <div className="flex items-center justify-center">
             <Image

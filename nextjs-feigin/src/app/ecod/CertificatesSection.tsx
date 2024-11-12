@@ -7,20 +7,30 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 import Image from "next/image";
+import Certificate1 from "../assets/CE-Feigin-Electric.webp";
+import Certificate2 from "../assets/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003-2.webp";
+import Certificate3 from "../assets/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS-01.webp";
+import Certificate4 from "../assets/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS.webp";
+import Certificate5 from "../assets/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003.webp";
+import Certificate6 from "../assets/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS-02.webp";
 
 const CertificatesSection = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="container mx-auto px-4 py-10 my-20">
       <div className="text-center mb-8">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
-          Certyfikaty i Zatwierdzenia
+          
+          <span className="relative inline-block text-fgreen-950">
+            Certyfikaty i Zatwierdzenia
+            <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-200 rounded-md"></span>
+          </span>
         </h2>
       </div>
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <ul className="list-disc list-outside space-y-4 text-gray-700 pl-5">
           {/* Certificate List */}
           <li className="flex items-start">
-            <Award className="w-6 h-6 text-fred-600 mr-3" />
+            <Award className="w-6 h-6 text-fgreen-600 mr-3" />
             <div>
               <span className="font-bold">
                 MoIAT Certificates and Approvals
@@ -28,13 +38,13 @@ const CertificatesSection = () => {
             </div>
           </li>
           <li className="flex items-start">
-            <CheckCircle className="w-6 h-6 text-fgreen-600 mr-3" />
+            <Award className="w-6 h-6 text-fgreen-600 mr-3" />
             <div>
               <span className="font-bold">RoHS Certification in the UAE</span>
             </div>
           </li>
           <li className="flex items-start">
-            <ShieldCheck className="w-6 h-6 text-fred-600 mr-3" />
+            <Award className="w-6 h-6 text-fgreen-600 mr-3" />
             <div>
               <span className="font-bold">
                 Trademark Certificates in Australia & Thailand
@@ -42,7 +52,7 @@ const CertificatesSection = () => {
             </div>
           </li>
           <li className="flex items-start">
-            <FileText className="w-6 h-6 text-fgreen-600 mr-3" />
+            <Award className="w-6 h-6 text-fgreen-600 mr-3" />
             <div>
               <span className="font-bold">
                 Test Reports from the PTEC laboratory Ministry of Science and
@@ -51,21 +61,57 @@ const CertificatesSection = () => {
             </div>
           </li>
           <li className="flex items-start">
-            <ClipboardCheck className="w-6 h-6 text-gray-500 mr-3" />
+            <Award className="w-6 h-6 text-gray-500 mr-3" />
             <div>
               <span className="font-bold">Inne</span>
             </div>
           </li>
         </ul>
-      </div>
-      <div className="mt-8 flex flex-wrap gap-4 justify-center">
-        <Image
-          src="/nextjs-feigin/src/app/assets/"
-          alt="Certificate 1"
-          width={100}
-          height={200}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md rounded-md"
-        />
+
+        <div className="mt-8 flex flex-row gap-4 justify-center flex-wrap ">
+          <Image
+            src={Certificate1}
+            alt="Certificate 1"
+            width={296}
+            height={384}
+            className="h-[25vh]  w-auto shadow-md rounded-md"
+          />
+          <Image
+            src={Certificate1}
+            alt="Certificate 1"
+            width={296}
+            height={384}
+            className=" h-[25dvh] w-auto shadow-md rounded-md"
+          />
+          <Image
+            src={Certificate2}
+            alt="Certificate 1"
+            width={296}
+            height={384}
+            className=" h-[25dvh] w-auto shadow-md rounded-md"
+          />
+          <Image
+            src={Certificate3}
+            alt="Certificate 1"
+            width={296}
+            height={384}
+            className=" h-[25dvh] w-auto shadow-md rounded-md"
+          />
+          <Image
+            src={Certificate4}
+            alt="Certificate 1"
+            width={296}
+            height={384}
+            className=" h-[25dvh] w-auto shadow-md rounded-md"
+          />
+          <Image
+            src={Certificate5}
+            alt="Certificate 1"
+            width={296}
+            height={384}
+            className=" h-[25dvh] w-auto shadow-md rounded-md"
+          />
+        </div>
       </div>
     </section>
   );
@@ -73,10 +119,3 @@ const CertificatesSection = () => {
 
 export default CertificatesSection;
 
-/*
-  This component is a responsive "Certyfikaty i Zatwierdzenia" section that displays a list of certifications and related images.
-  - Uses Tailwind CSS for adaptive and responsive styling.
-  - Updated icons to better represent each type of certification, adding enhanced visual context.
-  - Certification images are arranged in a flexible layout to adapt to different screen sizes.
-  - Color scheme (fred and fgreen) is utilized to distinguish different certification categories.
-*/

@@ -7,7 +7,19 @@ import {
   Loader2,
 } from "lucide-react";
 
-const ProblemCard = ({
+import { FC, ComponentType } from "react";
+
+interface ProblemCardProps {
+  icon: ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  bgColor: string;
+  iconBgColor: string;
+  textColor: string;
+  iconColor: string;
+}
+
+const ProblemCard: FC<ProblemCardProps> = ({
   icon: Icon,
   title,
   description,

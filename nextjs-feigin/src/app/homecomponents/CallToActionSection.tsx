@@ -1,8 +1,8 @@
-"use client";
+
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { Phone, Mail, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { TransitionLink } from "../components/utils/TransitionLink";
 
 const plLang = {
   title: "Skontaktuj się z nami",
@@ -21,25 +21,6 @@ const plLang = {
     },
   },
   button: "Strona Kontaktów",
-};
-
-const enLang = {
-  title: "Contact Us",
-  description:
-    "Have questions or ready to start a project? Get in touch with us and let's create something amazing together.",
-  buttons: {
-    call: {
-      label: "Call",
-      description: "Speak directly with our team",
-      href: "tel:+1234567890",
-    },
-    email: {
-      label: "Email",
-      description: "We're here to answer your questions",
-      href: "mailto:info@feiginelectric.com",
-    },
-  },
-  button: "Contact Page",
 };
 
 export default function CallToActionSection() {
@@ -77,14 +58,14 @@ export default function CallToActionSection() {
           </div>
         </div>
         <div className="my-5 grid place-content-center">
-          <Link href="/cases">
+          <TransitionLink href="/contact">
             <Button
               className="flex items-center p-6 rounded-lg shadow-lg space-x-4 w-full
       bg-fred-400 py-6 ring-fred-400 px-12 text-fred-50 font-semibold transition-all duration-300 hover:text-fred-50  hover:bg-red-500 ring-1 ring-offset-2 hover:ring-fred-600 hover:ring-2"
             >
               {plLang.button} <ChevronRight />
             </Button>
-          </Link>
+          </TransitionLink>
         </div>
       </div>
     </section>
@@ -92,11 +73,17 @@ export default function CallToActionSection() {
 }
 
 // Contact Button Component with Framer Motion Animation
-function ContactButton({ href, icon, label, description, className }) {
+interface ContactButtonProps {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+  description: string;
+  className?: string;
+}
+
+function ContactButton({ href, icon, label, description, className }: ContactButtonProps) {
   return (
-    <motion.a
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+    <Link
       href={href}
       className={`flex items-center justify-center p-4 rounded-lg text-left shadow-lg space-x-4 max-w-full w-full md:w-auto bg-fred-400 py-4 ring-fred-400 px-8 text-fred-50 font-semibold transition-all duration-300 hover:text-fred-50 hover:bg-red-500 ring-1 ring-offset-2 hover:ring-fred-600 hover:ring-2 ${className}`}
     >
@@ -105,6 +92,6 @@ function ContactButton({ href, icon, label, description, className }) {
         <h3 className="text-xl font-semibold">{label}</h3>
         <p className="text-fred-50 text-sm">{description}</p>
       </div>
-    </motion.a>
+    </Link>
   );
 }

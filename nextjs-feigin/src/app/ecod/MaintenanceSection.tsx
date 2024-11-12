@@ -5,11 +5,11 @@ const MaintenanceSection = () => {
   return (
     <section className="container  px-4 py-10 bg-fred-50 rounded-lg shadow-lg my-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
+        <div className='ml-10'>
           <h2 className="text-3xl font-bold mb-4">
             <span className="relative inline-block text-fred-950">
               Konserwacja
-              <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-200 rounded-md"></span>
+              <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-100 rounded-md"></span>
             </span>
           </h2>
           <p className="text-gray-700 mb-4 text-balance">

@@ -24,7 +24,12 @@ const plLang = {
   },
 };
 
-const AboutCard = ({ content, borderColor }) => (
+interface AboutCardProps {
+  content: string;
+  borderColor: string;
+}
+
+const AboutCard = ({ content, borderColor }: AboutCardProps) => (
   <div
     className={`bg-white rounded-lg shadow-lg p-4 md:p-6 border-t-4 hover:border-t-2 hover:border-b-2 transition-all ${borderColor}`}
   >

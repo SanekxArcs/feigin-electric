@@ -3,7 +3,6 @@
 import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import balkan from "../assets/europe.svg";
 import europe from "../assets/europe.svg";
 import thailand from "../assets/Thailand.svg";

@@ -37,11 +37,20 @@ const ProductBenefitsSection = () => {
   return (
     <section className="container mx-auto px-4 py-10">
       <div className="text-center mb-8">
-        <h2 className="text-fred-600 text-3xl font-bold mb-4">Wszystkie korzyści produktu</h2>
+        <h2 className="text-fred-600 text-3xl font-bold mb-4">
+          
+          <span className="relative inline-block text-fgreen-950">
+            Wszystkie korzyści produktu
+            <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-100 rounded-md"></span>
+          </span>
+        </h2>
       </div>
       <div className="flex flex-wrap justify-center items-center gap-8 w-1/2 mx-auto">
         {benefitsData.map((benefit, index) => (
-          <div key={index} className="flex flex-col items-center text-center w-40">
+          <div
+            key={index}
+            className="flex flex-col items-center text-center w-40"
+          >
             <benefit.icon className={`w-16 h-16 ${benefit.color} mb-2`} />
             <p className="text-gray-700 font-semibold">{benefit.label}</p>
           </div>

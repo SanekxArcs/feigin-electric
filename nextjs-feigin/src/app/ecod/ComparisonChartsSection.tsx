@@ -1,25 +1,72 @@
+import Image from "next/image";
+import CharakterystykaNapicia from "../assets/Charakterystyka napicia.webp";
+import CharakterystykaNapiciaECOD from "../assets/Charakterystyka napie Ecodcia.webp";
+import CharakterystykakW from "../assets/Charakterystyka kW.webp";
+import CharakterystykakWECOD from "../assets/Charakterystyka kW ECOD.webp";
 
 
 const ComparisonChartsSection = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="container mx-auto px-4 py-10 my-20">
       <div className="text-center mb-8">
-        <h2 className="text-fred-600 text-3xl font-bold mb-4">Bez ECOD <span className="text-fgreen-600">vs</span> Z ECOD</h2>
+        <h2 className="text-fred-600 text-3xl font-bold mb-12">
+          <span className="relative inline-block text-fgreen-950">
+            Bez <span className="text-fred-600 font-bold">EC</span>
+            <span className="text-fgreen-700 font-bold">OD</span> VS Z
+            <span className="text-fred-600 font-bold pl-2">EC</span>
+            <span className="text-fgreen-700 font-bold">OD</span>
+            <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-100 rounded-md"></span>
+          </span>
+        </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Charts Without ECOD */}
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <h3 className="text-fred-600 text-xl font-semibold mb-4">Charakterystyka napięcia</h3>
-          <img src="/images/without-ecod-voltage-chart.png" alt="Charakterystyka napięcia Bez ECOD" className="w-full rounded-md shadow-sm mb-4" />
-          <h3 className="text-fred-600 text-xl font-semibold mb-4">Charakterystyka kW</h3>
-          <img src="/images/without-ecod-kw-chart.png" alt="Charakterystyka kW Bez ECOD" className="w-full rounded-md shadow-sm" />
+        <div className="bg-fred-50 p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-fred-600 text-xl font-semibold mb-4">
+            Charakterystyka napięcia
+          </h3>
+
+          <Image
+            src={CharakterystykaNapicia}
+            alt="Charakterystyka napięcia Bez ECOD"
+            width={670}
+            height={350}
+            className="w-full rounded-md shadow-sm mb-4"
+          />
+
+          <h3 className="text-fred-600 text-xl font-semibold mb-4">
+            Charakterystyka kW
+          </h3>
+          <Image
+            src={CharakterystykakW}
+            alt="Charakterystyka napięcia Bez ECOD"
+            width={670}
+            height={350}
+            className="w-full rounded-md shadow-sm mb-4"
+          />
         </div>
         {/* Charts With ECOD */}
         <div className="bg-fgreen-50 p-6 rounded-lg shadow-md text-center">
-          <h3 className="text-fgreen-700 text-xl font-semibold mb-4">Charakterystyka napięcia</h3>
-          <img src="/images/with-ecod-voltage-chart.png" alt="Charakterystyka napięcia Z ECOD" className="w-full rounded-md shadow-sm mb-4" />
-          <h3 className="text-fgreen-700 text-xl font-semibold mb-4">Charakterystyka kW</h3>
-          <img src="/images/with-ecod-kw-chart.png" alt="Charakterystyka kW Z ECOD" className="w-full rounded-md shadow-sm" />
+          <h3 className="text-fgreen-700 text-xl font-semibold mb-4">
+            Charakterystyka napięcia
+          </h3>
+          <Image
+            src={CharakterystykaNapiciaECOD}
+            alt="Charakterystyka napięcia Bez ECOD"
+            width={670}
+            height={350}
+            className="w-full rounded-md shadow-sm mb-4"
+          />
+          <h3 className="text-fgreen-700 text-xl font-semibold mb-4">
+            Charakterystyka kW
+          </h3>
+          <Image
+            src={CharakterystykakWECOD}
+            alt="Charakterystyka napięcia Bez ECOD"
+            width={670}
+            height={350}
+            className="w-full rounded-md shadow-sm mb-4"
+          />
         </div>
       </div>
     </section>

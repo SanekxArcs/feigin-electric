@@ -9,8 +9,13 @@ interface CaseCardProps {
   imageSrc: string;
   pdfLink: string;
 }
-
+const plLang = {
+  title: "Sprawy",
+  description:
+    "Pracowaliśmy dla wielkich firm. Oferujemy pełną gamę produktów dla supermarketów, sklepów ogólnospożywczych, hoteli, sieci restauracji szybkiej obsługi, fabryk za pośrednictwem naszej linii modelowej ECOD oraz zgodnie z indywidualnymi potrzebami.",
+};
 function CaseCard({ title, imageSrc, pdfLink }: CaseCardProps) {
+  
   return (
     <div className="relative bg-white shadow-md rounded-lg overflow-hidden group hover:-translate-y-1 transition-all hover:shadow-xl">
       <Image
@@ -102,11 +107,8 @@ export default function CaseStudies() {
     <>
       {/* Hero Section */}
       <PageTopSection
-        title="Case Studies"
-        description="We've worked for great companies. We offer a full range of
-              products for supermarkets, convenience stores, hotels, fast food
-              restaurant chains, factories through our ECOD model line, and
-              according to individual needs."
+        title={plLang.title}
+        description={plLang.description}
       />
 
       {/* Case Studies Section */}

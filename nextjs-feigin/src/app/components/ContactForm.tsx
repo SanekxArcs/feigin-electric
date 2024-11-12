@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+"use client"
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import useLocalStorageState from "../services/useLocalStorageState";
 
 function ContactForm() {
-  const [klientName, setKlientName] = useLocalStorageState("klientName", "");
-  const [klientLastname, setKlientLastname] = useLocalStorageState(
-    "klientLastname",
-    ""
-  );
-  const [mail, setMail] = useLocalStorageState("mail", "");
-  const [telefon, setTelefon] = useLocalStorageState("telefon", "");
-  const [typ, setTyp] = useLocalStorageState("typ", "");
-  const [rachunek, setRachunek] = useLocalStorageState("rachunek", "");
-  const [textToMessage, setTextToMessage] = useLocalStorageState(
-    "textToMessage",
-    ""
-  );
+  const [klientName, setKlientName] = useState("");
+  const [klientLastname, setKlientLastname] = useState("");
+  const [mail, setMail] = useState("");
+  const [telefon, setTelefon] = useState("");
+  const [typ, setTyp] = useState("");
+  const [rachunek, setRachunek] = useState("");
+  const [textToMessage, setTextToMessage] = useState("");
   const [checkbox, setCheckbox] = useState(false);
 
   const clean = () => {
@@ -31,7 +25,15 @@ function ContactForm() {
 
   const submitSubjectName = `Contact od klienta! ${klientLastname} ${klientName}`;
 
-  const handleInputChange = (setter) => (e) => {
+  interface InputChangeEvent {
+    target: {
+      value: string;
+    };
+  }
+
+  type Setter = (value: string) => void;
+
+  const handleInputChange = (setter: Setter) => (e: InputChangeEvent) => {
     setter(e.target.value);
   };
 
@@ -43,7 +45,7 @@ function ContactForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-7xl p-7 rounded shadow-lg mx-auto bg-gradient-to-br from-fred-50 to-fred-200 shadow-fred-200 ring ring-fred-400"
+          className="max-w-7xl p-7 rounded shadow-md mx-auto bg-gradient-to-br from-fred-50 to-fred-200 shadow-fred-100 ring ring-fred-200"
         >
           <form
             action="https://formsubmit.co/d6c7e0c47156a06e7321617dac55cdac"
@@ -63,30 +65,30 @@ function ContactForm() {
 
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 mb-7">
               <div className="flex flex-col gap-7">
-                {renderInputField(
-                  "Imię",
-                  klientName,
-                  handleInputChange(setKlientName),
-                  "Imię",
-                  "text",
-                  true
-                )}
-                {renderInputField(
-                  "Nazwisko",
-                  klientLastname,
-                  handleInputChange(setKlientLastname),
-                  "Nazwisko",
-                  "text",
-                  true
-                )}
-                {renderInputField(
-                  "E-mail",
-                  mail,
-                  handleInputChange(setMail),
-                  "E-mail",
-                  "email",
-                  true
-                )}
+                {renderInputField({
+                  placeholder: "Imię",
+                  value: klientName,
+                  onChange: handleInputChange(setKlientName),
+                  id: "Imię",
+                  type: "text",
+                  required: true
+                })}
+                {renderInputField({
+                  placeholder: "Nazwisko",
+                  value: klientLastname,
+                  onChange: handleInputChange(setKlientLastname),
+                  id: "Nazwisko",
+                  type: "text",
+                  required: true
+                })}
+                {renderInputField({
+                  placeholder: "E-mail",
+                  value: mail,
+                  onChange: handleInputChange(setMail),
+                  id: "E-mail",
+                  type: "email",
+                  required: true
+                })}
               </div>
               <div className="flex flex-col gap-7">
                 <div className="relative w-full min-w-[200px]">
@@ -152,7 +154,7 @@ function ContactForm() {
                 <button
                   type="submit"
                   disabled={!checkbox}
-                  className="flex gap-2 justify-center items-center w-full px-6 py-3 font-medium leading-tight uppercase transition duration-150 ease-in-out rounded shadow-md bg-primary text-fred-950 hover:bg-fred-400 hover:shadow-lg hover:shadow-fred-400/50 focus:bg-fred-400 focus:shadow-lg focus:outline-none focus:ring-2 active:bg-fred-400 active:shadow-lg bg-fred-400 text-md disabled:opacity-40 disabled:hover:shadow-md disabled:cursor-not-allowed"
+                  className="flex gap-2 justify-center items-center w-full px-6 py-3 font-medium leading-tight uppercase transition duration-150 ease-in-out rounded shadow-md bg-primary text-white hover:bg-fred-400 hover:shadow-md hover:shadow-fred-400/50 focus:bg-fred-400 focus:shadow-md focus:outline-none focus:ring-2 active:bg-fred-400 active:shadow-md bg-fred-400 text-md disabled:opacity-40 disabled:hover:shadow-md disabled:cursor-not-allowed"
                 >
                   Wyślij
                   <svg
@@ -183,7 +185,7 @@ function ContactForm() {
                     exit={{ opacity: 0, x: 50 }}
                     transition={{ duration: 0.5 }}
                     onClick={clean}
-                    className="flex gap-2 justify-center items-center px-6 py-3 text-xs font-medium leading-tight uppercase transition duration-150 ease-in-out rounded shadow-md text-fred-950 hover:bg-red-400 hover:shadow-lg hover:shadow-red-400/50 focus:bg-red-400 focus:shadow-lg focus:outline-none focus:ring-2 active:bg-red-400 active:shadow-lg bg-red-400"
+                    className="flex gap-2 justify-center items-center px-6 py-3 text-xs font-medium leading-tight uppercase transition duration-150 ease-in-out rounded shadow-md text-white hover:bg-red-400 hover:shadow-md hover:shadow-red-400/50 focus:bg-red-400 focus:shadow-md focus:outline-none focus:ring-2 active:bg-red-400 active:shadow-md bg-red-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +211,23 @@ function ContactForm() {
     </AnimatePresence>
   );
 
-  function renderInputField(placeholder, value, onChange, id, type, required) {
+  interface RenderInputFieldProps {
+    placeholder: string;
+    value: string;
+    onChange: (e: InputChangeEvent) => void;
+    id: string;
+    type: string;
+    required: boolean;
+  }
+
+  function renderInputField({
+    placeholder,
+    value,
+    onChange,
+    id,
+    type,
+    required,
+  }: RenderInputFieldProps) {
     return (
       <div className="relative h-10 w-full min-w-[200px]">
         <input

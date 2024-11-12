@@ -54,7 +54,7 @@ export default function Header() {
                 />
               ))}
             </ul>
-            <Link href="https://ems.feiginelectric.com/">
+            <TransitionLink href="https://ems.feiginelectric.com/">
               <Button
                 variant="outline"
                 className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
@@ -62,14 +62,14 @@ export default function Header() {
                 <MonitorCog className="mr-2 md:mr-0" />
                 <span className="md:hidden xl:block">{plLang.ctaButton}</span>
               </Button>
-            </Link>
+            </TransitionLink>
           </nav>
 
           {/* Mobile Menu Button and 'Online Monitoring' Button */}
           <div className="flex items-center lg:hidden">
             {/* 'Online Monitoring' Button visible on md screens and above */}
             <div className="hidden md:block">
-              <Link href="https://ems.feiginelectric.com/">
+              <TransitionLink href="https://ems.feiginelectric.com/">
                 <Button
                   variant="outline"
                   className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
@@ -77,7 +77,7 @@ export default function Header() {
                   <MonitorCog className="mr-2" />
                   <span className="">{plLang.ctaButton}</span>
                 </Button>
-              </Link>
+              </TransitionLink>
             </div>
 
             {/* Mobile Menu Button */}
@@ -120,7 +120,7 @@ export default function Header() {
               ))}
               {/* 'Online Monitoring' Button visible on small screens within the mobile menu */}
               <div className="mt-4 md:hidden flex justify-center">
-                <Link href="https://ems.feiginelectric.com/">
+                <TransitionLink href="https://ems.feiginelectric.com/">
                   <Button
                     variant="outline"
                     className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
@@ -130,7 +130,7 @@ export default function Header() {
                       {plLang.ctaButton}
                     </span>
                   </Button>
-                </Link>
+                </TransitionLink>
               </div>
             </nav>
           </motion.div>

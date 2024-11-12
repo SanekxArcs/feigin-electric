@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import CasesImage from "../assets/DALL·E 2024-11-11 11.51.53 - An SVG-style illustration of energy efficiency and optimization in a modern business setting. The image should feature digital dashboards with charts,.webp";
+import { TransitionLink } from "../components/utils/TransitionLink";
 
 const plLang = {
   title: "Realne Wyniki, Realny Wpływ",
@@ -68,11 +68,11 @@ const CaseSection = () => {
               </span>
             </blockquote>
 
-            <Link href="/cases">
+            <TransitionLink href="/cases">
               <Button className="bg-fgreen-600 px-6 py-3 text-white font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 hover:ring-1 ring-offset-2 ring-fgreen-700">
                 {plLang.button} <ChevronRight />
               </Button>
-            </Link>
+            </TransitionLink>
           </div>
         </div>
 

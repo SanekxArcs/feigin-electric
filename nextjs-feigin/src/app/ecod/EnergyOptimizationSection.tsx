@@ -55,7 +55,13 @@ export default function EnergyOptimizationSection() {
   );
 }
 
-function Card({ icon: Icon, title, items }) {
+interface CardProps {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  items: { icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; text: string }[];
+}
+
+function Card({ icon: Icon, title, items }: CardProps) {
   return (
     <div className="bg-fgreen-50 rounded-lg p-6 shadow-md hover:bg-fgreen-100 focus:bg-fgreen-200 active:bg-fgreen-300 transition ease-in-out duration-300">
       <h3 className="text-fgreen-700 text-2xl font-semibold mb-4 flex items-center">
