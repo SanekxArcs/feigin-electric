@@ -3,7 +3,7 @@ import { BatteryCharging, ChevronsRight, TrendingUp, X, Zap } from "lucide-react
 
 const EcodSummaryPhotovoltaics = () => {
   return (
-    <section className="container mx-auto px-4 py-10 my-20">
+    <section className="hidden md:block container mx-auto px-4 py-10 my-20">
       <div className="text-center mb-8">
         <h2 className="text-fred-600 text-3xl font-bold mb-10">
           
