@@ -1,10 +1,11 @@
+
 import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/client";
 import { Image } from "next-sanity/image";
 import PageTopSection from "../components/PageTopSection";
-import { title } from "process";
+import { PortableText } from "@portabletext/react";
 
 const POSTS_QUERY = `*[
   _type == "post"
@@ -18,7 +19,25 @@ export default async function IndexPage() {
 
   const builder = imageUrlBuilder(client);
 
-  function urlFor(asset: any) {
+  interface Asset {
+    _ref: string;
+    _type: string;
+  }
+
+  interface Post {
+    _id: string;
+    title: string;
+    mainImage: {
+      asset: Asset;
+    };
+    body: any;
+    slug: {
+      current: string;
+    };
+    publishedAt: string;
+  }
+
+  function urlFor(asset: Asset) {
     return builder.image(asset);
   }
 
@@ -27,12 +46,10 @@ export default async function IndexPage() {
     description:
       "Przeczytaj nasze najnowsze wpisy na blogu. Nasza wizja, misja, sukces i wiele innych, które mogą Ci się spodobać.",
   };
+
   return (
     <>
-      <PageTopSection
-        title={plLang.title}
-        description={plLang.description}
-      />
+      <PageTopSection title={plLang.title} description={plLang.description} />
       <main className="container mx-auto min-h-screen p-4 md:p-8">
         <ul className="grid gap-4 grid-cols-1 md:grid-cols-3">
           {posts.map((post) => (
@@ -48,7 +65,7 @@ export default async function IndexPage() {
                   />
                   <div className="bg-white p-4 sm:p-6 dark:bg-gray-900">
                     <time
-                      dateTime="2022-10-10"
+                      dateTime={new Date(post.publishedAt).toISOString()}
                       className="block text-xs text-gray-500 dark:text-gray-400"
                     >
                       {new Date(post.publishedAt).toLocaleDateString()}
@@ -57,13 +74,9 @@ export default async function IndexPage() {
                     <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
                       {post.title}
                     </h3>
-                    {post.body.block ? (
-                      <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
-                        {post.body.block}
-                      </p>
-                    ) : (
-                      ""
-                    )}
+                    <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+                      <PortableText value={post.body} />
+                    </div>
                   </div>
                 </article>
               </Link>

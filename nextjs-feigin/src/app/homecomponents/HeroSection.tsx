@@ -30,7 +30,7 @@ const HeroSection = () => {
           objectFit="cover"
         />
       </div>
-      <div className="container mx-auto px-6 flex flex-col items-center justify-center h-screen relative z-10">
+      <div className="container mx-auto px-6 flex flex-col items-center justify-center h-[90vh] relative z-10">
         <Image
           src={FeiginElectricLogo}
           alt="Feigin Electric"

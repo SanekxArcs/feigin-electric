@@ -10,7 +10,7 @@ interface CaseCardProps {
   pdfLink: string;
 }
 const plLang = {
-  title: "Sprawy",
+  title: "Wdrożenia",
   description:
     "Pracowaliśmy dla wielkich firm. Oferujemy pełną gamę produktów dla supermarketów, sklepów ogólnospożywczych, hoteli, sieci restauracji szybkiej obsługi, fabryk za pośrednictwem naszej linii modelowej ECOD oraz zgodnie z indywidualnymi potrzebami.",
 };
@@ -21,8 +21,8 @@ function CaseCard({ title, imageSrc, pdfLink }: CaseCardProps) {
       <Image
         src={imageSrc}
         alt={title}
-        width={500}
-        height={300}
+        width={485}
+        height={224}
         className="w-full h-48 md:h-56 object-cover"
       />
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent p-4 transition-all opacity-100 group-hover:opacity-100 translate-y-0 grid place-content-center md:opacity-0 md:group-hover:opacity-100 md:translate-y-5 md:group-hover:translate-y-0">

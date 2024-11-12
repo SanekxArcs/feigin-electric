@@ -19,7 +19,6 @@ const CertificatesSection = () => {
     <section className="container mx-auto px-4 py-10 my-20">
       <div className="text-center mb-8">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
-          
           <span className="relative inline-block text-fgreen-950">
             Certyfikaty i Zatwierdzenia
             <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-200 rounded-md"></span>
@@ -74,42 +73,42 @@ const CertificatesSection = () => {
             alt="Certificate 1"
             width={296}
             height={384}
-            className="h-[25vh]  w-auto shadow-md rounded-md"
+            className="h-[25vh] w-auto shadow-md rounded-md"
           />
           <Image
             src={Certificate1}
             alt="Certificate 1"
             width={296}
             height={384}
-            className=" h-[25dvh] w-auto shadow-md rounded-md"
+            className="h-[25vh] w-auto shadow-md rounded-md"
           />
           <Image
             src={Certificate2}
-            alt="Certificate 1"
+            alt="Certificate 2"
             width={296}
             height={384}
-            className=" h-[25dvh] w-auto shadow-md rounded-md"
+            className="h-[25vh] w-auto shadow-md rounded-md"
           />
           <Image
             src={Certificate3}
-            alt="Certificate 1"
+            alt="Certificate 3"
             width={296}
             height={384}
-            className=" h-[25dvh] w-auto shadow-md rounded-md"
+            className="h-[25vh] w-auto shadow-md rounded-md"
           />
           <Image
             src={Certificate4}
-            alt="Certificate 1"
+            alt="Certificate 4"
             width={296}
             height={384}
-            className=" h-[25dvh] w-auto shadow-md rounded-md"
+            className="h-[25vh] w-auto shadow-md rounded-md"
           />
           <Image
             src={Certificate5}
-            alt="Certificate 1"
+            alt="Certificate 5"
             width={296}
             height={384}
-            className=" h-[25dvh] w-auto shadow-md rounded-md"
+            className="h-[25vh] w-auto shadow-md rounded-md"
           />
         </div>
       </div>
@@ -118,4 +117,3 @@ const CertificatesSection = () => {
 };
 
 export default CertificatesSection;
-

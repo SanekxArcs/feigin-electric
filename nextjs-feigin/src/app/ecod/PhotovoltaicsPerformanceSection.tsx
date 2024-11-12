@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const PhotovoltaicsPerformanceSection = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div className="text-center mb-8">
-        <h2 className="text-fgreen-600 text-3xl font-bold mb-4">
+        <h2 className="text-fgreen-600 text-3xl md:text-4xl font-bold mb-4">
           <span className="relative inline-block text-fgreen-950">
             Działanie z Fotowoltaiką
             <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-200 rounded-md"></span>
@@ -15,14 +15,14 @@ const PhotovoltaicsPerformanceSection = () => {
           zwiększenie produkcji energii z paneli słonecznych.
         </p>
       </div>
-      <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <h3 className="text-lg font-semibold text-gray-800 text-center mb-4">
+      <div className=" ring-1 ring-fgreen-600 ring-offset-2 p-6 rounded-lg shadow-lg">
+        <h3 className="text-lg md:text-xl font-semibold text-gray-800 text-center mb-4">
           Dane kW średnio na dzień
         </h3>
         <div className="overflow-x-auto">
-          <table className="min-w-full ">
+          <table className="min-w-full">
             <thead>
-              <tr className="">
+              <tr>
                 <th className="py-2 px-4 border-b border-gray-200 text-left text-gray-800">
                   Date
                 </th>

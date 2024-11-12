@@ -6,7 +6,6 @@ import NavItem from "./NavItem";
 import { Button } from "@/components/ui/button";
 import { MonitorCog, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
 
 const navItems = [
@@ -14,7 +13,7 @@ const navItems = [
   { href: "/about", label: { en: "About Us", pl: "O Nas" } },
   { href: "/ecod", label: { en: "ECOD", pl: "ECOD" } },
   { href: "/acrel", label: { en: "Acrel", pl: "Acrel" } },
-  { href: "/cases", label: { en: "Cases", pl: "Sprawy" } },
+  { href: "/cases", label: { en: "Cases", pl: "Wdrożenia" } },
   { href: "/blog", label: { en: "Blog", pl: "Blog" } },
   { href: "/contact", label: { en: "Contact", pl: "Kontakt" } },
 ];

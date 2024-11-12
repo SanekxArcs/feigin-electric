@@ -17,7 +17,7 @@ const ProductLineSection = () => {
         <table className="min-w-full bg-white ">
           <thead>
             <tr className="bg-fgreen-100">
-              <th className="py-3 px-4 border-b border-gray-300 text-left text-gray-800 font-semibold">
+              <th className="py-3 px-4 border-b border-gray-300 md:text-left text-gray-800 font-semibold min-w-32 text-center">
                 Typ
               </th>
               <th className="py-3 px-4 border-b border-gray-300 text-left text-gray-800 font-semibold">

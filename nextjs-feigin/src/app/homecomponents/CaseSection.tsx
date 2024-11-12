@@ -9,7 +9,7 @@ const plLang = {
   title: "Realne Wyniki, Realny Wpływ",
   description:
     "Dowiedz się, jak pomogliśmy firmom takim jak Twoja osiągnąć znaczne oszczędności energii, przedłużyć żywotność urządzeń i zmniejszyć ślad węglowy. Zapoznaj się z naszymi sukcesami, aby zobaczyć nasze rozwiązania w działaniu.",
-  button: "Zobacz Studia Przypadków",
+  button: "Zobacz Wdrożenia",
   quote: {
     text: "Rozwiązania Fegin Electric zmniejszyły nasze koszty energii o 12%, i nie moglibyśmy być szczęśliwsi!",
     author: "— Jane Doe, CEO of GreenTech Industries",
@@ -21,7 +21,7 @@ const plLang = {
     },
     implementations: {
       title: "Pomyślne Implementacje na Świecie",
-      value: "100+",
+      value: "1000+",
     },
     experience: {
       title: "Lata Doświadczenia w Branży",
@@ -48,6 +48,8 @@ const CaseSection = () => {
             <Image
               src={CasesImage}
               alt="Case Studies"
+              width={300}
+              height={300}
               className="w-96 h-auto rounded-lg shadow-md  object-cover"
             />
           </div>

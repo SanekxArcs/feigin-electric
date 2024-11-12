@@ -1,7 +1,7 @@
-import React from 'react';
-import { Eye, FileText, Settings, PlugZap } from 'lucide-react';
-import Image from 'next/image';
-import monitoring from '../assets/pl.webp';
+import React from "react";
+import { Eye, FileText, Settings, PlugZap } from "lucide-react";
+import Image from "next/image";
+import monitoring from "../assets/pl.webp";
 
 const EcodMonitoringPlatform = () => {
   return (
@@ -14,12 +14,12 @@ const EcodMonitoringPlatform = () => {
           </span>
         </h2>
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-lg flex gap-8">
-        <div className='w-1/2 grid place-content-center'>
+      <div className="bg-white lg:p-8 rounded-lg shadow-lg flex flex-col lg:flex-row justify-center gap-8">
+        <div className="lg:w-1/2 grid place-content-center">
           <ul className="list-disc list-outside space-y-4 text-gray-700 pl-5">
             {/* Live Monitoring */}
             <li className="flex items-start">
-              <Eye className="w-6 h-6 text-fgreen-600 mr-3" />
+              <Eye className="w-12 h-12 text-fgreen-600 mr-3" />
               <div className="text-balance">
                 <span className="font-bold">
                   Śledzenie zużycia energii na żywo:
@@ -30,7 +30,7 @@ const EcodMonitoringPlatform = () => {
             </li>
             {/* Detailed Reports */}
             <li className="flex items-start">
-              <FileText className="w-6 h-6 text-fred-500 mr-3" />
+              <FileText className="w-12 h-12 text-fred-400 mr-3" />
               <div className="text-balance">
                 <span className="font-bold">Szczegółowe raporty:</span> Uzyskaj
                 dostęp do danych historycznych, aby zrozumieć trendy zużycia
@@ -39,7 +39,7 @@ const EcodMonitoringPlatform = () => {
             </li>
             {/* Cost Savings Tips */}
             <li className="flex items-start">
-              <PlugZap className="w-6 h-6 text-fgreen-700 mr-3" />
+              <PlugZap className="w-12 h-12 text-fgreen-600 mr-3" />
               <div className="text-balance">
                 <span className="font-bold">
                   Wskazówki dotyczące oszczędności kosztów:
@@ -51,7 +51,7 @@ const EcodMonitoringPlatform = () => {
             </li>
             {/* Remote Control and Management */}
             <li className="flex items-start">
-              <Settings className="w-6 h-6 text-fred-600 mr-3" />
+              <Settings className="w-12 h-12 text-fred-400 mr-3" />
               <div className="text-balance">
                 <span className="font-bold">
                   Zdalne sterowanie i zarządzanie:
@@ -62,7 +62,7 @@ const EcodMonitoringPlatform = () => {
             </li>
             {/* Compatibility with Energy Meters */}
             <li className="flex items-start">
-              <PlugZap className="w-6 h-6 text-fgreen-800 mr-3" />
+              <PlugZap className="w-12 h-12 text-fgreen-600 mr-3" />
               <div className="text-balance">
                 <span className="font-bold">
                   Kompatybilność z licznikami energii:
@@ -73,7 +73,7 @@ const EcodMonitoringPlatform = () => {
             </li>
           </ul>
         </div>
-        <div className="">
+        <div className="md:w-1/2 p-4 mx-auto">
           <Image
             src={monitoring}
             alt="Monitoring online"
@@ -94,4 +94,5 @@ export default EcodMonitoringPlatform;
   - Uses Tailwind CSS for styling to ensure the component is adaptive and responsive across different devices.
   - Icons from Lucide React are used to represent each feature, providing a clear visual aid.
   - The color scheme (fred and fgreen) is used consistently to highlight different aspects of the platform.
+  - Updated layout to ensure proper stacking for mobile (`flex-col md:flex-row`).
 */
