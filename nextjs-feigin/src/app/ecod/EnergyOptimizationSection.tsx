@@ -30,9 +30,9 @@ export default function EnergyOptimizationSection() {
           </span>
         </h2>
       </div>
-      <div className="grid grid-cols-1 mx-auto w-1/2 place-content-center lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-screen-lg mx-auto md:place-content-center">
         {sections.map((section, index) => (
-          <div key={index} className="lg:col-span-1">
+          <div key={index} className="col-span-1">
             <Card
               icon={section.icon}
               title={section.title}
@@ -41,11 +41,13 @@ export default function EnergyOptimizationSection() {
           </div>
         ))}
       </div>
-      <div className="text-center ">
-        <div className=" mx-auto w-64" style={{ bottom: "-50px" }}>
+      <div className="text-center mt-10">
+        <div
+          className="mx-auto container hidden md:flex items-center justify-center"
+        >
           <SvgIcon />
         </div>
-        <p className="text-lg md:text-xl font-semibold text-fred-950">
+        <p className="text-lg md:text-xl font-semibold text-gray-500 mt-4">
           RÓWNOWAŻNE KORZYŚCI FINANSOWE I TECHNICZNYCH OPTYMALIZACJI ENERGII
         </p>
       </div>
@@ -62,7 +64,10 @@ function Card({ icon: Icon, title, items }) {
       </h3>
       <ul className="list-disc ml-6 space-y-2">
         {items.map((item, index) => (
-          <li key={index} className="text-fred-800 flex items-center hover:text-fred-600 focus:text-fred-500 active:text-fred-400 transition ease-in-out duration-300">
+          <li
+            key={index}
+            className="text-fred-800 flex items-center hover:text-fred-600 focus:text-fred-500 active:text-fred-400 transition ease-in-out duration-300"
+          >
             <item.icon className="w-5 h-5 mr-2 text-fgreen-600" />
             {item.text}
           </li>

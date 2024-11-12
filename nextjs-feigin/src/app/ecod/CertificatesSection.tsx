@@ -6,6 +6,7 @@ import {
   FileText,
   ClipboardCheck,
 } from "lucide-react";
+import Image from "next/image";
 
 const CertificatesSection = () => {
   return (
@@ -58,29 +59,11 @@ const CertificatesSection = () => {
         </ul>
       </div>
       <div className="mt-8 flex flex-wrap gap-4 justify-center">
-        <img
-          src="/images/certificate1.png"
+        <Image
+          src="/nextjs-feigin/src/app/assets/"
           alt="Certificate 1"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md rounded-md"
-        />
-        <img
-          src="/images/certificate2.png"
-          alt="Certificate 2"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md rounded-md"
-        />
-        <img
-          src="/images/certificate3.png"
-          alt="Certificate 3"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md rounded-md"
-        />
-        <img
-          src="/images/certificate4.png"
-          alt="Certificate 4"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md rounded-md"
-        />
-        <img
-          src="/images/certificate5.png"
-          alt="Certificate 5"
+          width={100}
+          height={200}
           className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg shadow-md rounded-md"
         />
       </div>

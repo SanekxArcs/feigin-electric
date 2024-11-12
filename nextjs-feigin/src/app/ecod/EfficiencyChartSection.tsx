@@ -1,12 +1,11 @@
+import Image from "next/image";
 import React from "react";
+import EfficiencyChart from "../assets/ecod-efficiency-chart.webp";
 
 const EfficiencyChartSection = () => {
   return (
     <section className="container mx-auto px-4 py-10">
       <div className="text-center mb-12">
-        <h2 className="text-fred-600 text-3xl font-bold mb-4">
-          ECOD Zasada Działania
-        </h2>
         <h3 className="text-lg text-gray-700 font-medium">Sprawność</h3>
         <p className="text-gray-700">
           Na przykładzie klimatyzatorów:
@@ -31,15 +30,10 @@ const EfficiencyChartSection = () => {
         </p>
       </div>
       <div className="bg-white p-6 rounded-lg shadow-lg">
-        <div className="text-center mb-4">
-          <h3 className="text-xl font-semibold text-fred-600 mb-2">
-            Dla Silników Asynchronicznych
-          </h3>
-        </div>
         <div className="flex items-center justify-center">
-          <img
-            src="/images/efficiency_chart.png"
-            alt="Wykres sprawności ECOD"
+          <Image
+            src={EfficiencyChart}
+            alt="Wykres sprawności ECOD Dla Silników Asynchronicznych"
             className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
           />
         </div>

@@ -1,50 +1,91 @@
-import React from 'react';
-import { Bolt, TrendingUp } from 'lucide-react';
+import React from "react";
+import Image from "next/image";
+import ChartVoltageCurrent from "../assets/ChartVoltageCurrent.webp";
+import EfficiencyChart from "../assets/ecod-efficiency-chart.webp";
 
 const WorkingPrincipleSection = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
-      <div className="text-center mb-12">
-        <h2 className="text-fred-600 text-3xl font-bold mb-4">ECOD Zasada Działania</h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Description Section */}
-        <div className="bg-fgreen-50 p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-fgreen-800 mb-4">
-            Opatentowana technologia ECOD
-          </h3>
-          <p className="text-gray-700 mb-4">
-            Opatentowana technologia ECOD działa na zasadzie, w której elektroniczny kontroler reguluje kierunek prądu w cewce każdego transformatora (po jednym na fazę), kontrolując i równoważąc parametry sieci. Ma to na celu utrzymanie najwyższej wydajności przy minimalnych stratach mocy w sieci.
-          </p>
+    <>
+      <section className="container mx-auto px-4 py-10 bg-white rounded-lg shadow-lg mb-12">
+        <div className="text-center mb-12">
+          <h2 className="text-fred-600 text-3xl font-bold mb-4">
+            <span className="relative inline-block text-fgreen-950">
+              <span className="text-fred-600 font-bold">EC</span>
+              <span className="text-fgreen-700 font-bold">OD</span> Zasada
+              Działania
+              <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-200 rounded-md"></span>
+            </span>
+          </h2>
         </div>
+        <div className="grid grid-cols-2">
+          <div className="flex flex-col justify-center items-center">
+            <h3 className="text-2xl font-semibold mb-4">
+              Opatentowana technologia{" "}
+              <span className="text-fred-600 font-bold">EC</span>
+              <span className="text-fgreen-700 font-bold">OD</span>
+            </h3>
+            <p className="text-gray-700 mb-4 text-center text-balance">
+              Opatentowana technologia ECOD działa na zasadzie, w której
+              elektroniczny kontroler reguluje kierunek prądu w cewce każdego
+              transformatora (po jednym na fazę), kontrolując i równoważąc
+              parametry sieci. Ma to na celu utrzymanie najwyższej wydajności
+              przy minimalnych stratach mocy w sieci.
+            </p>
+          </div>
+          <div className="flex flex-col items-center col-span-1">
+            <div className="flex items-center justify-center">
+              <Image
+                src={ChartVoltageCurrent}
+                alt="Wykres Prądowo-Napięciowy"
+                className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        {/* Chart Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
-          <h3 className="text-xl font-semibold text-fred-600 mb-4">
-            Wykres Prądowo-Napięciowy
-          </h3>
+      <section className="container mx-auto px-4 py-10 bg-white rounded-lg shadow-lg">
+        <div className="grid grid-cols-2 ">
+          <div className="text-left mb-12 flex flex-col justify-center items-center">
+            <h3 className="text-lg text-gray-700 font-medium">Sprawność</h3>
+            <p className="text-gray-700">
+              Na przykładzie klimatyzatorów:
+              <ul className="list-disc list-inside mt-2">
+                <li>
+                  <span className="text-blue-600 font-bold">Seria 1</span> -
+                  sprawność
+                </li>
+                <li>
+                  <span className="text-fred-600 font-bold">Seria 2</span> -
+                  prąd (Amper)
+                </li>
+                <li>
+                  <span className="text-green-500 font-bold">Seria 3</span> -
+                  wentylator zewnętrzny
+                </li>
+                <li>
+                  <span className="text-green-700 font-bold">Seria 4</span> -
+                  wentylator wewnętrzny
+                </li>
+              </ul>
+            </p>
+          </div>
           <div className="flex items-center justify-center">
-            <img
-              src="/images/ecod_chart.png"
-              alt="Wykres Prądowo-Napięciowy"
+            <Image
+              src={EfficiencyChart}
+              alt="Wykres sprawności ECOD Dla Silników Asynchronicznych"
               className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
             />
           </div>
-          <div className="flex items-center mt-4">
-            <Bolt className="text-fred-600 w-8 h-8 mr-3" />
-            <span className="text-gray-700 font-medium">
-              With Load but without use of ECOD Smart Optimizer
-            </span>
-          </div>
-          <div className="flex items-center mt-2">
-            <TrendingUp className="text-fgreen-600 w-8 h-8 mr-3" />
-            <span className="text-gray-700 font-medium">
-              With Load with use of ECOD Smart Optimizer
-            </span>
-          </div>
         </div>
-      </div>
-    </section>
+        <p className="text-gray-700 mt-6 text-center">
+          Zgodnie ze schematem, możemy wyraźnie zauważyć, że sprawność
+          klimatyzatora przy napięciu od 210 do 220 V wynosi blisko 100%.
+          Oznacza to, że przy tym napięciu klimatyzator optymalnie wykorzystuje
+          energię elektryczną, osiągając prawie 100% sprawności.
+        </p>
+      </section>
+    </>
   );
 };
 

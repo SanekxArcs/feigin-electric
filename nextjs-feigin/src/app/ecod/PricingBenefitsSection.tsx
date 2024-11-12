@@ -18,10 +18,6 @@ const PricingBenefitsSection = () => {
           <p className="text-gray-700 font-semibold">Redukcja Zużycia Energii</p>
         </div>
         <div className="flex flex-col items-center text-center">
-          <TrendingUp className="w-12 h-12 text-purple-500 mb-2" />
-          <p className="text-gray-700 font-semibold">Zyskaj Za Darmo</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
           <Sun className="w-12 h-12 text-orange-500 mb-2" />
           <p className="text-gray-700 font-semibold">Wydłużenie Żywotności Sprzętu</p>
         </div>

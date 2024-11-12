@@ -27,7 +27,8 @@ const ECODSection = () => {
       <div className="container max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           <span className="relative inline-block text-fgreen-950">
-            Dlaczego ECOD?
+            Dlaczego <span className="text-fred-600 font-bold">EC</span>
+            <span className="text-fgreen-700 font-bold">OD</span>?
             <span className="absolute -bottom-2 left-0 w-full h-2 bg-fgreen-200 rounded-md"></span>
           </span>
         </h2>
