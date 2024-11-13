@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
-import AboutPhoto from "../assets/store-front-singapore.webp";
+import AboutPhoto from "../assets/about/store-front-singapore.webp";
+import OurPartners from "../homecomponents/OurClients";
+import CallToActionSection from "../homecomponents/CallToActionSection";
 
 const plLang = {
   title: "O nas",
@@ -96,6 +98,8 @@ const About = () => {
           />
         </div>
       </div>
+      <OurPartners/>
+      <CallToActionSection/>
     </div>
   );
 };

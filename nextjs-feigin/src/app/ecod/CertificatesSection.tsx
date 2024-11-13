@@ -1,18 +1,11 @@
 import React from "react";
-import {
-  Award,
-  CheckCircle,
-  ShieldCheck,
-  FileText,
-  ClipboardCheck,
-} from "lucide-react";
+import {Award,} from "lucide-react";
 import Image from "next/image";
-import Certificate1 from "../assets/CE-Feigin-Electric.webp";
-import Certificate2 from "../assets/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003-2.webp";
-import Certificate3 from "../assets/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS-01.webp";
-import Certificate4 from "../assets/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS.webp";
-import Certificate5 from "../assets/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003.webp";
-import Certificate6 from "../assets/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS-02.webp";
+import Certificate1 from "../assets/certificates/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003-2.webp";
+import Certificate2 from "../assets/certificates/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003-2.webp";
+import Certificate3 from "../assets/certificates/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS-01.webp";
+import Certificate4 from "../assets/certificates/RoHS-Certificate-MJ-300523-042-_MR-188_-Gulftic-certification-ROHS.webp";
+import Certificate5 from "../assets/certificates/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003.webp";
 
 const CertificatesSection = () => {
   return (

@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import ECODSmartOptimizer from "../assets/WhatsApp Image 2023-11-14 at 19.35.55.png";
-import Acrel from "../assets/wireless-electricity-monitor.webp";
+import ECODSmartOptimizer from "../assets/home/ecod.webp";
+import Acrel from "../assets/home/wireless-electricity-monitor.webp";
 import { TransitionLink } from "../components/utils/TransitionLink";
 
 const plLang = {

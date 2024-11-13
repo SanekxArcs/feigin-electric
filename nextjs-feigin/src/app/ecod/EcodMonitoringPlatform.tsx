@@ -1,7 +1,7 @@
 import React from "react";
 import { Eye, FileText, Settings, PlugZap } from "lucide-react";
 import Image from "next/image";
-import monitoring from "../assets/pl.webp";
+import monitoring from "../assets/ecod/monitoringPl.webp";
 
 const EcodMonitoringPlatform = () => {
   return (

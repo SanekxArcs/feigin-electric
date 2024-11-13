@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import ChartVoltageCurrent from "../assets/ChartVoltageCurrent.webp";
-import EfficiencyChart from "../assets/ecod-efficiency-chart.webp";
+import ChartVoltageCurrent from "../assets/ecod/ChartVoltageCurrent.webp";
+import EfficiencyChart from "../assets/ecod/ecod-efficiency-chart.webp";
 
 const WorkingPrincipleSection = () => {
   return (

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import CasesImage from "../assets/DALL·E 2024-11-11 11.51.53 - An SVG-style illustration of energy efficiency and optimization in a modern business setting. The image should feature digital dashboards with charts,.webp";
+import CasesImage from "../assets/home/templateImage.webp";
 import { TransitionLink } from "../components/utils/TransitionLink";
 
 const plLang = {

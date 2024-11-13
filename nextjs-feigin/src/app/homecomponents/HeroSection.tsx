@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import backgroundSvg from "../assets/blob-scene-haikei (1).svg";
+import backgroundSvg from "../assets/home/hero waves.svg";
 import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
 
 const plLang = {

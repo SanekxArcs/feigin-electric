@@ -1,8 +1,8 @@
 import Image from "next/image";
-import CharakterystykaNapicia from "../assets/Charakterystyka napicia.webp";
-import CharakterystykaNapiciaECOD from "../assets/Charakterystyka napie Ecodcia.webp";
-import CharakterystykakW from "../assets/Charakterystyka kW.webp";
-import CharakterystykakWECOD from "../assets/Charakterystyka kW ECOD.webp";
+import CharakterystykaNapicia from "../assets/ecod/Charakterystyka napicia.webp";
+import CharakterystykaNapiciaECOD from "../assets/ecod/Charakterystyka napie Ecodcia.webp";
+import CharakterystykakW from "../assets/ecod/Charakterystyka kW.webp";
+import CharakterystykakWECOD from "../assets/ecod/Charakterystyka kW ECOD.webp";
 
 
 const ComparisonChartsSection = () => {

@@ -3,11 +3,11 @@
 import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
 import Link from "next/link";
-import balkan from "../assets/europe.svg";
-import europe from "../assets/europe.svg";
-import thailand from "../assets/Thailand.svg";
-import southEastAsia from "../assets/South East Asia.svg";
-import middleEast from "../assets/South East Asia.svg";
+import balkan from "../assets/contact/europe.svg";
+import europe from "../assets/contact/europe.svg";
+import thailand from "../assets/contact/Thailand.svg";
+import southEastAsia from "../assets/contact/South East Asia.svg";
+import middleEast from "../assets/contact/South East Asia.svg";
 import ContactForm from "../components/ContactForm";
 
 interface OfficeCardProps {
