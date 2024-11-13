@@ -10,9 +10,9 @@ import { PortableText } from "@portabletext/react";
 const POSTS_QUERY = `*[
   _type == "post"
   && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, mainImage, body, slug, publishedAt}`;
+]{_id, title, mainImage, body, slug, publishedAt}|order(publishedAt desc)`;
 
-const options = { next: { revalidate: 30 } };
+const options = { next: { revalidate: 60 } };
 
 export default async function IndexPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
@@ -54,7 +54,7 @@ export default async function IndexPage() {
         <ul className="grid gap-4 grid-cols-1 md:grid-cols-3">
           {posts.map((post) => (
             <li key={post._id}>
-              <Link href={`/${post.slug.current}`}>
+              <Link href={`/blog/${post?.slug?.current}`}>
                 <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
                   <Image
                     src={urlFor(post.mainImage.asset).url()}

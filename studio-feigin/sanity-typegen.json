@@ -1,0 +1,5 @@
+{
+  "path": "../studio-feigin/src/**/*.{ts,tsx,js,jsx}",
+  "schema": "./schema.json",
+  "generates": "../nextjs-feigin/src/sanity/types.ts"
+}

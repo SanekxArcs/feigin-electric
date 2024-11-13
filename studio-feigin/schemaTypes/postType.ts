@@ -14,7 +14,11 @@ export const postType = defineType({
       name: 'slug',
       type: 'slug',
       options: {source: 'title'},
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule
+    .required()
+    .error(`Required to generate a page on the website`),
+    hidden: ({document}) => !document?.name,
+
     }),
     defineField({
       name: 'publishedAt',
