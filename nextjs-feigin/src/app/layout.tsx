@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Head from "next/head";
+import { SanityLive } from "@/sanity/live";
 
 const interFont = localFont({
   src: "./fonts/InterVariable.woff2",
@@ -78,6 +79,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ScrollToTopButton />
+        <SanityLive />
       </body>
     </html>
   );
