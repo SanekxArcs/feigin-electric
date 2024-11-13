@@ -117,13 +117,13 @@ export default async function PostPage({
               )}
               {tags && tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
-                  {tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm md:text-base dark:bg-gray-800"
-                    >
-                      {tag}
-                    </span>
+                  {tags.map((tag: string) => (
+                  <span
+                    key={tag}
+                    className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm md:text-base dark:bg-gray-800"
+                  >
+                    {tag}
+                  </span>
                   ))}
                 </div>
               )}
