@@ -120,7 +120,7 @@ const ProductsSection = () => {
               </Button>
             </TransitionLink>
           </div>
-          <div className="md:w-1/2 w-full mt-6 md:mt-0">
+          <div className="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
             <Image
               src={Acrel}
               alt="Feigin Electric"
