@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       "Feigin Electric umożliwia firmom oszczędność na rachunkach za prąd dzięki zaawansowanej technologii energetycznej. Odkryj inteligentne i opłacalne rozwiązania już dziś!",
     images: [
       {
-        url: "/nextjs-feigin/src/app/assets/FeiginElectricWebTitle.webp",
+        url: "/nextjs-feigin/public/FeiginElectricWebTitle.webp",
         width: 600,
         height: 400,
         alt: "Feigin Electric | Obniż rachunki za prąd dzięki inteligentnej technologii",
