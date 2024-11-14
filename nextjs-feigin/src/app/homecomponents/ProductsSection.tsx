@@ -80,7 +80,7 @@ const ProductsSection = () => {
             <p className="mb-4 text-lg md:text-xl font-medium">
               {plLang.products.Ecod.description}
             </p>
-            <ul className="list-disc pl-5 mb-6 space-y-2 text-sm md:text-base">
+            <ul className="list-disc pl-5 mb-6 text-left space-y-2 text-sm md:text-base">
               {plLang.products.Ecod.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -109,7 +109,7 @@ const ProductsSection = () => {
             <p className="mb-4 text-lg md:text-xl font-medium">
               {plLang.products.Acrel.description}
             </p>
-            <ul className="list-disc pl-5 mb-6 space-y-2 text-sm md:text-base">
+            <ul className="list-disc  text-left pl-5 mb-6 space-y-2 text-sm md:text-base">
               {plLang.products.Acrel.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
