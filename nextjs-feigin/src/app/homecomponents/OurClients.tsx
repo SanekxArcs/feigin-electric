@@ -5,7 +5,7 @@ import fs from "fs";
 import Image from "next/image";
 
 const plLang = {
-  title: "Współpracujemy z najlepszymi partnerami",
+  title: "Nasi partnerzy",
 };
 
 const OurPartners = () => {
