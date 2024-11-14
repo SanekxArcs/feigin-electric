@@ -78,7 +78,7 @@ const ProductsSection = () => {
               </span>
               <span className="text-fgreen-700">
                 {plLang.products.Ecod.title.second}
-              </span>{" "}
+              </span>
               <br /> {plLang.products.Ecod.title.third}
             </h3>
             <p className="mb-4 text-lg md:text-xl font-medium">
