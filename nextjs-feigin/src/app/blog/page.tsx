@@ -1,5 +1,5 @@
 
-import Link from "next/link";
+import {Link} from 'next-view-transitions';
 import { type SanityDocument } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/client";
@@ -57,6 +57,8 @@ export default async function IndexPage() {
               <Link href={`/blog/${post?.slug?.current}`}>
                 <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
                   <Image
+                    id="mainImage"
+                    style={{ viewTransitionName: `image-${post.title}` }}
                     src={urlFor(post.mainImage.asset).url()}
                     alt={post.title}
                     width={500}

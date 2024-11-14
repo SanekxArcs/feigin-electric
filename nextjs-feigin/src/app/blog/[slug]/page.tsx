@@ -7,8 +7,9 @@ import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { CircleChevronLeft } from "lucide-react";
 import { defineQuery, PortableText } from "next-sanity";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "next-view-transitions";
 import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
@@ -96,20 +97,22 @@ export default async function PostPage({
         <div className="grid items-start gap-8 md:gap-12 lg:gap-16 lg:grid-cols-2">
           {mainImageUrl && (
             <Image
+              id="mainImage"
               src={mainImageUrl}
               alt={title || "Post"}
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center w-full md:max-w-lg lg:max-w-none sticky top-8"
               height="400"
               width="800"
+              style={{ viewTransitionName: `image-${title}` }}
             />
           )}
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-4">
-              {title && (
+              {/* {title && (
                 <h1 className="text-2xl md:text-4xl font-bold tracking-tighter mb-4 md:mb-8">
                   {title}
                 </h1>
-              )}
+              )} */}
               {formattedDate && (
                 <div className="text-sm text-gray-500 md:text-base">
                   Published on: {formattedDate}
@@ -118,12 +121,7 @@ export default async function PostPage({
               {tags && tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {tags.map((tag: string) => (
-                  <span
-                    key={tag}
-                    className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm md:text-base dark:bg-gray-800"
-                  >
-                    {tag}
-                  </span>
+                    <Badge className="px-1 py-0.5 bg-fgreen-100" key={tag}>{tag}</Badge>
                   ))}
                 </div>
               )}
@@ -134,7 +132,6 @@ export default async function PostPage({
               </div>
             )}
           </div>
-          
         </div>
         <div className="flex justify-center mx-auto">
           <Link href="/blog">

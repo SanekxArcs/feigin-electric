@@ -1,6 +1,6 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
+import Link,{ LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react"; // Import React types to ensure everything is properly typed
 

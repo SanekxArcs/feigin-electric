@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -6,6 +7,7 @@ import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Head from "next/head";
 import { SanityLive } from "@/sanity/live";
+import { ViewTransitions } from "next-view-transitions";
 
 const interFont = localFont({
   src: "./fonts/InterVariable.woff2",
@@ -59,33 +61,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
-      <Head>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <meta name="apple-mobile-web-app-title" content="Feigin Electric" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
-      <body
-        className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased min-h-screen`}
-      >
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ScrollToTopButton />
-        <SanityLive />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="pl">
+        <Head>
+          <link
+            rel="icon"
+            type="image/png"
+            href="/favicon-96x96.png"
+            sizes="96x96"
+          />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <meta name="apple-mobile-web-app-title" content="Feigin Electric" />
+          <link rel="manifest" href="/site.webmanifest" />
+        </Head>
+        <body
+          className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased min-h-screen`}
+        >
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <ScrollToTopButton />
+          <SanityLive />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
