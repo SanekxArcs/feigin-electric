@@ -5,6 +5,7 @@ import PageTopSection from "../components/PageTopSection";
 import AboutPhoto from "../assets/about/store-front-singapore.webp";
 import OurPartners from "../homecomponents/OurClients";
 import CallToActionSection from "../homecomponents/CallToActionSection";
+import { title } from "process";
 
 const plLang = {
   title: "O nas",
@@ -12,9 +13,11 @@ const plLang = {
     "Dowiedz się więcej o nas. Nasza wizja, misja, sukces i wiele innych rzeczy, które mogą Ci się podobać.",
   ourStory: {
     title: "Nasza historia",
+    title2: "Prowadzenie udanego biznesu",
+    title3: "od 2014 roku",
     content: {
       first:
-        "Leo Feigin, uznany profesjonalista w dziedzinie technologii jądrowej i lotniczej, pełniący wysokie stanowiska w sektorze elektryczności jądrowej i lotniczej, wyłożył podstawy naszej technologii, która po raz pierwszy została opracowana i opisana w 1995 roku.",
+        "Leo Feigin, renomowany specjalista ds. technologii podstawowych, który zajmował wysokie stanowiska w sektorze energetyki jądrowej i lotniczej, opracował podstawy naszej technologii, które po raz pierwszy zostały opisane w 1995 roku.",
       second:
         "Utworzenie laboratorium do testowania i analizy komponentów było kolejnym logicznym krokiem w opracowaniu urządzenia optymalizacyjnego, które, dzięki szeregowi ulepszeń i aktualizacji modeli, zaowocowało dzisiejszą opatentowaną technologią i linią modeli ECOD.",
       third:
@@ -51,15 +54,16 @@ const About = () => {
           {/* Text Content */}
           <div className="lg:w-1/2 lg:pl-8">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 md:mb-6 text-fred-800">
-              
               <span className="relative inline-block text-fred-950">
                 {plLang.ourStory.title}
                 <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-200 rounded-md"></span>
               </span>
             </h2>
-            <h3 className="text-3xl md:text-5xl font-light mb-4 md:mb-6 text-gray-800"></h3>
+            <h3 className="text-3xl md:text-7xl font-light mb-4 md:mb-6 text-gray-800">
+              {plLang.ourStory.title2}
+            </h3>
             <h3 className="text-3xl md:text-5xl mb-4 md:mb-6 text-fred-800 italic">
-              since 2014
+              {plLang.ourStory.title3}
             </h3>
             <p className="text-lg md:text-xl mb-4 md:mb-6 text-gray-600 text-balance">
               {plLang.ourStory.content.first}
@@ -98,8 +102,8 @@ const About = () => {
           />
         </div>
       </div>
-      <OurPartners/>
-      <CallToActionSection/>
+      <OurPartners />
+      <CallToActionSection />
     </div>
   );
 };

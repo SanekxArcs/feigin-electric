@@ -3,11 +3,11 @@
 import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
 import Link from "next/link";
-import balkan from "../assets/contact/europe.svg";
-import europe from "../assets/contact/europe.svg";
-import thailand from "../assets/contact/Thailand.svg";
-import southEastAsia from "../assets/contact/South East Asia.svg";
-import middleEast from "../assets/contact/South East Asia.svg";
+import balkan from "../assets/contact/balkan.webp";
+import europe from "../assets/contact/europe.webp";
+import thailand from "../assets/contact/Thailand.webp";
+import southEastAsia from "../assets/contact/South East Asia.webp";
+import middleEast from "../assets/contact/middleEast.webp";
 import ContactForm from "../components/ContactForm";
 
 interface OfficeCardProps {
@@ -88,9 +88,9 @@ const OfficeCard: React.FC<OfficeCardProps> = ({
     <Image
       src={imageSrc}
       alt={imageAlt}
-      className="w-24 h-24 sm:w-40 sm:h-40 mb-4 sm:mb-0 sm:mr-4 object-cover group-hover:fill-red-500 transition-colors duration-300"
-      width={160}
-      height={160}
+      className="w-full h-64 sm:w-40 sm:h-40 mb-4 sm:mb-0 sm:mr-4 object-contain group-hover:fill-red-500 transition-colors duration-300"
+      width={320}
+      height={320}
     />
     <div>
       <h6 className="text-lg font-semibold mb-2">{officeName}</h6>

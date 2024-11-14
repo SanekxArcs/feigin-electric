@@ -6,7 +6,6 @@ const plLang = {
     description:
       "Naszą misją jest umożliwienie osobom prywatnym i firmom osiągnięcia znacznych oszczędności na kosztach energii elektrycznej, wykorzystując naszą",
     technology: "innowacyjną technologię",
-    goal: ". Naszym celem jest umożliwienie oszczędności energii elektrycznej w wysokości 6-14%.",
   },
   goal: {
     title: "Nasz Cel",
@@ -38,7 +37,6 @@ const MissionGoalSection = () => {
           <span className="font-bold text-fred-600 pl-1">
             {plLang.mission.technology}
           </span>
-          {plLang.mission.goal}
         </p>
       </section>
       <section className="py-20 relative overflow-hidden container mx-auto px-6 text-center grid place-content-center">
