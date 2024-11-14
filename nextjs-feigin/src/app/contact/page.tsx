@@ -10,8 +10,10 @@ import southEastAsia from "../assets/contact/South East Asia.webp";
 import middleEast from "../assets/contact/middleEast.webp";
 import ContactForm from "../components/ContactForm";
 
+import { StaticImageData } from "next/image";
+
 interface OfficeCardProps {
-  imageSrc: string;
+  imageSrc: StaticImageData;
   imageAlt: string;
   officeName: string;
   officeTitleFirm: string;
