@@ -23,7 +23,7 @@ export default function ScrollToTopButton() {
 
   return (
     <button
-      className={`ring-1 ring-primary hover:ring-2 hover:shadow-primary transition-all fixed bottom-4 right-4 md:bottom-8 md:right-8 p-3 rounded-full bg-white shadow-lg ${isVisible ? "flex" : "hidden"} items-center justify-center`}
+      className={`ring-1 ring-primary hover:ring-2 hover:shadow-primary transition-all fixed bottom-4 right-4 md:bottom-4 md:right-8 p-3 rounded-2xl bg-white shadow-lg ${isVisible ? "flex" : "hidden"} items-center justify-center`}
       type="button"
       onClick={scrollToTop}
       aria-label="Scroll to top"
