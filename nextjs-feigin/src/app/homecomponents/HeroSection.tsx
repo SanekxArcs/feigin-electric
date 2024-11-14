@@ -9,9 +9,9 @@ import { TransitionLink } from "../components/utils/TransitionLink";
 const plLang = {
   title: "Technologia Oszczędzania Energii",
   description:
-    "Najbardziej natychmiastowy i praktyczny sposób na obniżenie emisji węgla i przyspieszenie rewolucji ekologicznej to po prostu zużywanie mniej energii.",
-  button: "Zobacz nasze produkty",
-}
+    "Zmniejszenie zużycia energii to natychmiastowy i praktyczny sposób na obniżenie emisji dwutlenku węgla i przyspieszenie rewolucji ekologicznej.",
+  button: "Zobacz Produkty",
+};
 const HeroSection = () => {
   return (
     <section className="hero-section bg-fred-50 relative">
