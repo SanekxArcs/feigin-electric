@@ -11,8 +11,9 @@ const plLang = {
     "Dowiedz się, jak pomogliśmy firmom takim jak Twoja osiągnąć znaczne oszczędności energii, przedłużyć żywotność urządzeń i zmniejszyć ślad węglowy. Zapoznaj się z naszymi sukcesami, aby zobaczyć nasze rozwiązania w działaniu.",
   button: "Zobacz Wdrożenia",
   quote: {
-    text: "Rozwiązania Fegin Electric zmniejszyły nasze koszty energii o 12%, i nie moglibyśmy być szczęśliwsi!",
-    author: "— Jane Doe, CEO of GreenTech Industries",
+    text: "Rozwiązania Fegin Electric zmniejszyły nasze koszty energii o 10%, i nie moglibyśmy być szczęśliwsi!",
+    author:
+      "— Haidil Mustafa Mohd Din, Maitenance Executive Dominos Pizza Singapore, Malaysia, Cambodia",
   },
   statistics: {
     savings: {
