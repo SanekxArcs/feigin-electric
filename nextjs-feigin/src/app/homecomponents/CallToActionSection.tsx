@@ -12,12 +12,12 @@ const plLang = {
     call: {
       label: "Zadzwoń",
       description: "Porozmawiaj bezpośrednio z naszym zespołem",
-      href: "tel:+1234567890",
+      href: "tel:+48607111541",
     },
     email: {
       label: "Napisz",
       description: "Jesteśmy tutaj, aby odpowiedzieć na Twoje pytania",
-      href: "mailto:info@feiginelectric.com",
+      href: "mailto:kontakt@feiginelectric.com",
     },
   },
   button: "Strona Kontaktów",
