@@ -34,7 +34,6 @@ export default function Ecod() {
       <EnergyOptimizationSection/>
       <BenefitsSection/>
       <WorkingPrincipleSection/>
-      <MaintenanceSection/>
 
       <PhotovoltaicsPerformanceSection/>
       <ComparisonBenefitsSection/>
