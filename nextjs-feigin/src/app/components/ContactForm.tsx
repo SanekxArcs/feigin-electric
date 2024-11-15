@@ -146,7 +146,7 @@ function ContactForm() {
                 </label>
                 <p className="text-xs md:text-sm lg:text-base">
                   <span className="text-red-500">*</span> Wyrażam zgodę na
-                  przetwarzanie przez Solar Sense danych personalnych w
+                  przetwarzanie przez  Feigin Electric danych personalnych w
                   formularzu kontaktowym w celu wykonania i przesłania oferty.
                 </p>
               </div>
