@@ -17,7 +17,7 @@ const plLang = {
     title3: "od 2014 roku",
     content: {
       first:
-        "Leo Feigin, renomowany specjalista ds. technologii podstawowych, który zajmował wysokie stanowiska w sektorze energetyki jądrowej i lotniczej, opracował podstawy naszej technologii, które po raz pierwszy zostały opisane w 1995 roku.",
+        "Lev Feigin, wiodący specjalista ds. technologii energetycznych, który zajmował wysokie stanowiska w sektorze energetyki jądrowej i lotniczej, opracował podstawy naszej technologii, które po raz pierwszy zostały opisane w 1995 roku.",
       second:
         "Utworzenie laboratorium do testowania i analizy komponentów było kolejnym logicznym krokiem w opracowaniu urządzenia optymalizacyjnego, które, dzięki szeregowi ulepszeń i aktualizacji modeli, zaowocowało dzisiejszą opatentowaną technologią i linią modeli ECOD.",
       third:
