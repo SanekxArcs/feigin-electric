@@ -37,11 +37,11 @@ export default function Ecod() {
       <MaintenanceSection/>
 
       <PhotovoltaicsPerformanceSection/>
-      <EcodSummaryPhotovoltaics/>
       <ComparisonBenefitsSection/>
+      <EcodSummaryPhotovoltaics/>
       <ComparisonChartsSection/>
+      <MaintenanceSection/>
       
-
       <EcodMonitoringPlatform/>
       <CertificatesSection/>
       <ProductLineSection/>
