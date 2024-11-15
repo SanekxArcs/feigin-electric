@@ -57,7 +57,7 @@ function ContactForm() {
             <input
               type="hidden"
               name="_next"
-              value="https://solarsense.pl/thanks"
+              value="https://feiginelectric.pl/thanks"
             />
             <input type="text" name="_honey" className="hidden" />
             <input type="hidden" name="_subject" value={submitSubjectName} />
@@ -124,7 +124,7 @@ function ContactForm() {
                     className="peer relative h-5 w-5 cursor-pointer appearance-none rounded border-2 border-fred-950 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded before:bg-fred-950 before:opacity-0 before:transition-opacity checked:border-fred-500 checked:bg-fred-500 checked:before:bg-fred-500 hover:before:opacity-10"
                     id="checkbox"
                     name="Checkbox"
-                    value="Wyrażam zgodę na przetwarzanie przez Solar Sense danych personalnych w formularzu kontaktowym w celu wykonania i przesłania oferty."
+                    value="Wyrażam zgodę na przetwarzanie przez Feigin Electric danych personalnych w formularzu kontaktowym w celu wykonania i przesłania oferty."
                     required
                   />
                   <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
