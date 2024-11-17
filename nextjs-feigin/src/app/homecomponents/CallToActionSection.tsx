@@ -1,8 +1,9 @@
 
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, ChevronRight } from "lucide-react";
+import { Phone, Mail, ChevronRight, NotebookTabs } from "lucide-react";
 import Link from "next/link";
 import { TransitionLink } from "../components/utils/TransitionLink";
+import HighlightedText from "../components/HighlightedText";
 
 const plLang = {
   title: "Skontaktuj się z nami",
@@ -29,10 +30,11 @@ export default function CallToActionSection() {
       <div className="container mx-auto px-4 text-center space-y-6">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold">
-          <span className="relative inline-block text-fred-950">
-            {plLang.title}
-            <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-200 rounded-md z-10"></span>
-          </span>
+          <HighlightedText
+            title={plLang.title}
+            colorLine="bg-fred-100"
+            colorText="text-fred-950"
+          />
         </h2>
         <p className="text-lg md:text-xl text-fred-900 max-w-2xl mx-auto">
           {plLang.description}
@@ -57,10 +59,10 @@ export default function CallToActionSection() {
             />
           </div>
         </div>
-        <div className="my-5 grid place-content-center">
+        <div className="my-5 md:grid md:place-content-center">
           <TransitionLink href="/contact">
             <Button
-              className="flex items-center p-6 rounded-lg shadow-lg space-x-4 w-full
+              className="flex items-center p-6 rounded-lg shadow-lg space-x-4 justify-self-center w-full
       bg-fred-400 py-6 ring-fred-400 px-12 text-fred-50 font-semibold transition-all duration-300 hover:text-fred-50  hover:bg-red-500 ring-1 ring-offset-2 hover:ring-fred-600 hover:ring-2"
             >
               {plLang.button} <ChevronRight />
@@ -90,7 +92,7 @@ function ContactButton({ href, icon, label, description, className }: ContactBut
       <div className="text-4xl">{icon}</div>
       <div>
         <h3 className="text-xl font-semibold">{label}</h3>
-        <p className="text-fred-50 text-sm">{description}</p>
+        <p className="text-fred-50 text-xs">{description}</p>
       </div>
     </Link>
   );

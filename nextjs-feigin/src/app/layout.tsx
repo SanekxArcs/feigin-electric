@@ -8,6 +8,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import Head from "next/head";
 import { SanityLive } from "@/sanity/live";
 import { ViewTransitions } from "next-view-transitions";
+import {Toaster} from "@/components/ui/toaster"
 
 const interFont = localFont({
   src: "./fonts/InterVariable.woff2",
@@ -81,13 +82,16 @@ export default function RootLayout({
           <link rel="manifest" href="/site.webmanifest" />
         </Head>
         <body
-          className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased min-h-screen`}
+          className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
         >
           <Header />
-          <main>{children}</main>
+          <main className="flex-grow">{children} <Toaster /></main>
+          
           <Footer />
           <ScrollToTopButton />
           <SanityLive />
+          
+          
         </body>
       </html>
     </ViewTransitions>

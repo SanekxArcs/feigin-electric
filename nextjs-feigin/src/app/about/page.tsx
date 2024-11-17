@@ -6,6 +6,7 @@ import AboutPhoto from "../assets/about/store-front-singapore.webp";
 import OurPartners from "../homecomponents/OurClients";
 import CallToActionSection from "../homecomponents/CallToActionSection";
 import { title } from "process";
+import HighlightedText from "../components/HighlightedText";
 
 const plLang = {
   title: "O nas",
@@ -49,15 +50,12 @@ const About = () => {
       {/* Top Section */}
       <PageTopSection title={plLang.title} description={plLang.description} />
       {/* Our Story Section */}
-      <div className="container mx-auto px-4 md:px-6 py-8 md:py-16 my-10 md:my-20">
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-16  md:my-20">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Text Content */}
           <div className="lg:w-1/2 lg:pl-8">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 md:mb-6 text-fred-800">
-              <span className="relative inline-block text-fred-950">
-                {plLang.ourStory.title}
-                <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-200 rounded-md"></span>
-              </span>
+              <HighlightedText title={plLang.ourStory.title} colorLine="bg-fred-100" colorText="text-fred-950" />
             </h2>
             <h3 className="text-3xl md:text-7xl font-light mb-4 md:mb-6 text-gray-800">
               {plLang.ourStory.title2}

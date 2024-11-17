@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button";
 import { MonitorCog, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
+import plFlag from "../assets/flag/pl.svg";
+import enFlag from "../assets/flag/en.svg";
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 const navItems = [
   { href: "/", label: { en: "Home", pl: "Główna" } },
@@ -20,10 +24,20 @@ const navItems = [
 
 const plLang = {
   ctaButton: "Monitoring Online",
+  toast: "Już jesteś na polskiej wersji strony."
 };
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const { toast } = useToast();
+
+  const handlePolishClick = () => {
+    toast({
+      description: plLang.toast,
+    });
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="z-50 sticky top-0 bg-fred-50/30 backdrop-blur-xl shadow-lg mx-1 rounded-b-3xl">
@@ -62,6 +76,33 @@ export default function Header() {
                 <span className="md:hidden xl:block">{plLang.ctaButton}</span>
               </Button>
             </TransitionLink>
+            {/* Language Switcher */}
+            <div className="relative flex items-center space-x-4 ">
+              <div className="relative group ">
+                <Button
+                  variant="outline"
+                  className="flex items-center space-x-2"
+                >
+                  <Image src={plFlag} alt="Polish" width={24} height={24} />
+                </Button>
+                <div className="absolute overflow-hidden right-0 mt-2 w-24 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <TransitionLink
+                    href="https://feiginelectric.com"
+                    className="flex items-center space-x-2 px-4 py-2 hover:bg-fred-200"
+                  >
+                    <Image src={enFlag} alt="English" width={24} height={24} />
+                    <span>EN</span>
+                  </TransitionLink>
+                  <div
+                    className="flex items-center space-x-2 px-4 py-2 bg-fred-100 hover:bg-fred-200 cursor-pointer"
+                    onClick={handlePolishClick}
+                  >
+                    <Image src={plFlag} alt="Polish" width={24} height={24} />
+                    <span>PL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </nav>
 
           {/* Mobile Menu Button and 'Online Monitoring' Button */}
@@ -125,10 +166,25 @@ export default function Header() {
                     className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
                   >
                     <MonitorCog className="mr-2" />
-                    <span className="">
-                      {plLang.ctaButton}
-                    </span>
+                    <span className="">{plLang.ctaButton}</span>
                   </Button>
+                </TransitionLink>
+              </div>
+              {/* Language Switcher */}
+              <div className=" flex justify-center w-full pt-4 ">
+                <div
+                  className="flex items-center space-x-2 px-4 py-2 bg-fred-200"
+                  onClick={handlePolishClick}
+                >
+                  <Image src={plFlag} alt="Polish" width={24} height={24} />
+                  <span>PL</span>
+                </div>
+                <TransitionLink
+                  href="https://feiginelectric.com"
+                  className="flex items-center space-x-2 px-4 py-2 hover:bg-gray-100"
+                >
+                  <Image src={enFlag} alt="English" width={24} height={24} />
+                  <span>EN</span>
                 </TransitionLink>
               </div>
             </nav>

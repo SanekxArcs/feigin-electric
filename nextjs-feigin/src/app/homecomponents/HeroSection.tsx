@@ -43,8 +43,8 @@ const HeroSection = () => {
           </TransitionLink>
         </div>
       </div>
-      <div className="absolute top-0 inset-x-0 h-24 pointer-events-none bg-gradient-to-b from-white z-20"></div>
-      <div className="absolute bottom-0 inset-x-0 h-24 pointer-events-none bg-gradient-to-t from-white z-20"></div>
+      <div className="absolute top-0 inset-x-0 h-24 pointer-events-none bg-gradient-to-b from-white z-10"></div>
+      <div className="absolute bottom-0 inset-x-0 h-24 pointer-events-none bg-gradient-to-t from-white z-10"></div>
     </section>
   );
 };

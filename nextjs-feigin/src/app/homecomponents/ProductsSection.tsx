@@ -5,6 +5,7 @@ import Image from "next/image";
 import ECODSmartOptimizer from "../assets/home/ecod.webp";
 import Acrel from "../assets/home/wireless-electricity-monitor.webp";
 import { TransitionLink } from "../components/utils/TransitionLink";
+import HighlightedText from "../components/HighlightedText";
 
 const plLang = {
   title: "Nasze Produkty",
@@ -51,25 +52,27 @@ const plLang = {
 
 const ProductsSection = () => {
   return (
-    <section className="products-section py-10 md:py-20">
+    <section className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-10 md:mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-center">
-            <span className="relative inline-block text-fgreen-950">
-              {plLang.title}
-              <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-100 rounded-md -z-10"></span>
-            </span>
+            <HighlightedText title={plLang.title} colorLine="bg-fred-100" colorText="text-fred-950"/>
           </h2>
         </div>
 
         {/* Ecod Smart Optimizer */}
         <div className="product-item flex flex-col md:flex-row items-center mb-16 md:mb-32">
-          <div className="md:w-1/2 w-full">
+          <div className="relative md:w-1/2 w-full flex justify-center items-center">
             <Image
               src={ECODSmartOptimizer}
               alt="Feigin Electric"
               className="h-72 md:h-96 w-full md:w-auto object-contain"
             />
+            <div className="absolute inset-0 flex justify-center items-center -z-10">
+              <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96"></div>
+              <div className="bg-fred-200 rounded-full w-56 h-56 md:w-72 md:h-72 absolute"></div>
+              <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute"></div>
+            </div>
           </div>
           <div className="md:w-1/2 w-full md:pl-12 mt-6 md:mt-0 text-center md:text-left">
             <h3 className="text-4xl md:text-6xl font-bold mb-4">
@@ -81,7 +84,7 @@ const ProductsSection = () => {
               </span>
               <br /> {plLang.products.Ecod.title.third}
             </h3>
-            <p className="mb-4 text-lg md:text-xl font-medium">
+            <p className="mb-4 text-lg md:text-xl font-medium text-gray-800">
               {plLang.products.Ecod.description}
             </p>
             <ul className="list-disc pl-5 mb-6 text-left space-y-2 text-sm md:text-base">
@@ -124,12 +127,17 @@ const ProductsSection = () => {
               </Button>
             </TransitionLink>
           </div>
-          <div className="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
+          <div className="relative md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
             <Image
               src={Acrel}
               alt="Feigin Electric"
               className="h-72 md:h-96 w-full md:w-auto object-contain"
             />
+            <div className="absolute inset-0 flex justify-center items-center -z-10">
+              <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96"></div>
+              <div className="bg-fred-200 rounded-full w-56 h-56 md:w-72 md:h-72 absolute"></div>
+              <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute"></div>
+            </div>
           </div>
         </div>
       </div>
