@@ -176,10 +176,10 @@ const ProductLineSection = () => {
                 ECOD-ML-285-400
               </td>
               <td className="py-3 px-4 border-b border-gray-300 text-gray-700">
-                400
+                415
               </td>
               <td className="py-3 px-4 border-b border-gray-300 text-gray-700">
-                330
+                285
               </td>
               <td className="py-3 px-4 border-b border-gray-300 text-gray-700">
                 380*350*855

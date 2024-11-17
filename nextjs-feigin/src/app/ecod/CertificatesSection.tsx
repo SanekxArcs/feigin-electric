@@ -1,5 +1,5 @@
 import React from "react";
-import {Award,} from "lucide-react";
+import { Award } from "lucide-react";
 import Image from "next/image";
 import Certificate1 from "../assets/certificates/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003-2.webp";
 import Certificate2 from "../assets/certificates/Certificate-of-Conformity-UAE-23-06-75579_E23-06-077725_NB0003-2.webp";

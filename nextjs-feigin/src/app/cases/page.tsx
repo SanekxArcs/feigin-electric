@@ -39,6 +39,20 @@ function CaseCard({ title, imageSrc, pdfLink }: CaseCardProps) {
 export default function CaseStudies() {
   const caseStudies = [
     {
+      title: "Sia Huat",
+      imageSrc:
+        "https://feiginelectric.com/wp-content/uploads/2024/11/sia-huat.jpg",
+      pdfLink:
+        "https://feiginelectric.com/wp-content/uploads/2024/11/case-study-sia-huat.pdf",
+    },
+    {
+      title: "Burger King Balkans",
+      imageSrc:
+        "https://feiginelectric.com/wp-content/uploads/2024/11/balkan-foods-burger-king-tirana-albania.jpg",
+      pdfLink:
+        "https://feiginelectric.com/wp-content/uploads/2024/11/case-study-balkan-foods-burger-king-tirana-albania.pdf",
+    },
+    {
       title: "Domino's Pizza Malaysia",
       imageSrc:
         "https://feiginelectric.com/wp-content/uploads/2024/11/case-study-dominos-malaysia.jpg",

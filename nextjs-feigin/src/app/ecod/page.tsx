@@ -25,31 +25,39 @@ export default function Ecod() {
   }
   return (
     <>
-    <PageTopSection
-          title={plLang.title}
-          description={plLang.description}
-        />
-      <ECODSection/>
-      <SectionTwo/>
-      <EnergyOptimizationSection/>
-      <BenefitsSection/>
-     <WorkingPrincipleSection/>        <PhotovoltaicsPerformanceSection/>
-
-      <ComparisonBenefitsSection/>
-      <ComparisonChartsSection/>
-      <EcodSummaryPhotovoltaics/>
-      
-      <MaintenanceSection/>
-      
-      <EcodMonitoringPlatform/>
-      <CertificatesSection/>
-      <ProductLineSection/>
-      
-      <ProductBenefitsSection/>
-      <OurPartners/>
-      <CallToActionSection/>
-
-
+      <PageTopSection title={plLang.title} description={plLang.description} />
+      {/* Dlaczego ECOD? */}
+      <ECODSection />
+      {/* Sześć najczęstszych problemów z jakością energii elektrycznej */}
+      <SectionTwo />
+      {/* Dlaczego optymalizacja energii jest ważna? */}
+      <EnergyOptimizationSection />
+      {/* Główne zalety ECOD */}
+      <BenefitsSection />
+      {/* ECOD Zasada Działania */}
+      <WorkingPrincipleSection />
+      {/* Działanie z Fotowoltaiką */}
+      <PhotovoltaicsPerformanceSection />
+      {/* Bez ECOD VS ZECOD */}
+      <ComparisonChartsSection />
+      {/* Podsumowanie działania ECOD z Fotowoltaika */}
+      <EcodSummaryPhotovoltaics />
+      {/* Korzyści w porównaniu do konkurencji */}
+      <ComparisonBenefitsSection />
+      {/* Konserwacja */}
+      <MaintenanceSection />
+      {/* Platforma monitoringu internetowego dla systemu ECOD */}
+      <EcodMonitoringPlatform />
+      {/* Certyfikaty i Zatwierdzenia */}
+      <CertificatesSection />
+      {/* Linia produktów ECOD */}
+      <ProductLineSection />
+      {/* Wszystkie korzyści produktu */}
+      <ProductBenefitsSection />
+      {/* Nasi partnerzy */}
+      <OurPartners />
+      {/* Skontaktuj się z nami */}
+      <CallToActionSection />
     </>
   );
 }
