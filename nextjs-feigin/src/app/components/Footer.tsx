@@ -9,10 +9,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary py-8 rounded-t-3xl mx-1 shadow-accent-foreground relative bottom-0">
-      <div className="absolute bottom-4 left-1/2 md:left-6 -translate-x-1/2 md:-translate-x-0 transform  flex space-x-4">
+      <div className="absolute bottom-4 left-1/2 md:left-6 -translate-x-1/2 md:-translate-x-0 transform  flex space-x-4 z-10">
         <TransitionLink
           href="https://www.linkedin.com/company/feiginelectricpoland"
-          className="bg-secondary p-2 rounded-2xl shadow-lg hover:bg-secondary-light transition-all w-12 h-12 hover:shadow-xl hover:shadow-black group"
+          className="bg-secondary p-2 rounded-2xl shadow-lg hover:bg-secondary-light transition-all w-12 h-12 hover:shadow-xl hover:shadow-black group cursor-pointer"
         >
           <svg
             role="img"
@@ -46,7 +46,7 @@ const Footer = () => {
           © {currentYear} Feigin Electric Sp. z o.o. Wszelkie prawa
           zastrzeżone.
         </p>
-        <p className="absolute top-4 left-1/2 -translate-x-1/2 opacity-0">Projekt i wykonanie: Oleksandr Dzisiak </p>
+        <p className="absolute top-4 left-1/2  -translate-x-1/2 opacity-0">Projekt i wykonanie: Oleksandr Dzisiak </p>
       </div>
     </footer>
   );
