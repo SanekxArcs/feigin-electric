@@ -93,9 +93,9 @@ export default function Header() {
                   <TransitionLink
                     href={
                       pathname.startsWith("/blog")
-                        ? "/blog"
+                        ? "https://feiginelectric.com/blog"
                         : pathname.startsWith("/recognitions")
-                          ? "/recognitions"
+                          ? "https://feiginelectric.com/recognitions"
                           : fullUrl
                     }
                     className="flex items-center space-x-2 px-4 py-2 hover:bg-fred-200"
