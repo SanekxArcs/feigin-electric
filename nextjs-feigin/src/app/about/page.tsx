@@ -48,12 +48,16 @@ const About = () => {
       {/* Top Section */}
       <PageTopSection title={plLang.title} description={plLang.description} />
       {/* Our Story Section */}
-      <div className="container mx-auto px-4 md:px-6 py-8 md:py-16  md:my-20">
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-16  md:my-20 select-none">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Text Content */}
           <div className="lg:w-1/2 lg:pl-8">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4 md:mb-6 text-fred-800">
-              <HighlightedText title={plLang.ourStory.title} colorLine="bg-fred-100" colorText="text-fred-950" />
+              <HighlightedText
+                title={plLang.ourStory.title}
+                colorLine="bg-fred-100"
+                colorText="text-fred-950"
+              />
             </h2>
             <h3 className="text-3xl md:text-7xl font-light mb-4 md:mb-6 text-gray-800">
               {plLang.ourStory.title2}
@@ -78,7 +82,7 @@ const About = () => {
         </div>
       </div>
       {/* Cards Section */}
-      <div className="container mx-auto px-4 md:px-6 py-8 md:py-16">
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-16  select-none">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AboutCard
             content={plLang.ourStory.content.second}
