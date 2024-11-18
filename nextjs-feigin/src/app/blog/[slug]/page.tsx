@@ -57,7 +57,12 @@ export default async function PostPage({
   const mainImageUrl = mainImage
     ? urlFor(mainImage)?.width(800).height(400).url()
     : null;
-  const formattedDate = new Date(publishedAt).toDateString();
+  const formattedDate = new Date(publishedAt).toLocaleDateString("pl-PL", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   const components = {
     types: {
@@ -90,22 +95,25 @@ export default async function PostPage({
               variant="ghost"
               className="hover:bg-gray-200 shadow text-gray-700"
             >
-              <CircleChevronLeft /> Wroć do blogu
+              <CircleChevronLeft /> Wróć do blogu
             </Button>
           </Link>
         </div>
         <div className="grid items-start gap-8 md:gap-12 lg:gap-16 lg:grid-cols-2">
-          {mainImageUrl && (
+          <div className="h-full w-full">
+            {mainImageUrl && (
             <Image
               id="mainImage"
               src={mainImageUrl}
               alt={title || "Post"}
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center w-full md:max-w-lg lg:max-w-none sticky top-8"
-              height="400"
-              width="800"
+              className="mx-auto aspect-video rounded-xl object-cover object-center w-full md:max-w-lg lg:max-w-none sticky top-8"
+              height={560}
+              width={560}
               style={{ viewTransitionName: `image-${title}` }}
             />
           )}
+          </div>
+          
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-4">
               {/* {title && (
@@ -115,13 +123,15 @@ export default async function PostPage({
               )} */}
               {formattedDate && (
                 <div className="text-sm text-gray-500 md:text-base">
-                  Published on: {formattedDate}
+                  Publikowane: {formattedDate}
                 </div>
               )}
               {tags && tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {tags.map((tag: string) => (
-                    <Badge className="px-1 py-0.5 bg-fgreen-100" key={tag}>{tag}</Badge>
+                    <Badge className="px-1 py-0.5 bg-fgreen-100" key={tag}>
+                      {tag}
+                    </Badge>
                   ))}
                 </div>
               )}
@@ -139,7 +149,7 @@ export default async function PostPage({
               variant="ghost"
               className="hover:bg-gray-200 shadow text-gray-700"
             >
-              <CircleChevronLeft /> Wroć do blogu
+              <CircleChevronLeft /> Wróć do blogu
             </Button>
           </Link>
         </div>
