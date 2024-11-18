@@ -41,7 +41,7 @@ const offices = [
     officeDetails: {
       titleFirm: "Ecnology Electronic Trading Ltd (Dubai)",
       tradeLicense: "Trade License: 1216211",
-      email: "Vishnukrishna@ecnology.co",
+      email: "info@ecnology.co",
       web: "https://ecnology.co",
     },
   },
@@ -50,7 +50,7 @@ const offices = [
     imageSrc: southEastAsia,
     imageAlt: "Map of South East Asia",
     officeDetails: {
-      titleFirm: "Ecnology Electronic Trading Ltd (Singapore)",
+      titleFirm: "Coefficient Alpha Pte. Ltd (Singapore)",
       tradeLicense: "UEN: 202225166K",
       web: "https://coefficientalpha.com.sg",
     },

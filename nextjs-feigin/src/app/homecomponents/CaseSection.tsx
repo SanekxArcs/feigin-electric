@@ -66,7 +66,7 @@ const CaseSection = () => {
               </span>
             </blockquote>
 
-            <TransitionLink href="/cases">
+            <TransitionLink href="/case-studies">
               <Button className="bg-fgreen-600 px-6 py-3 text-white font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 hover:ring-1 ring-offset-2 ring-fgreen-700">
                 {plLang.button} <ChevronRight />
               </Button>

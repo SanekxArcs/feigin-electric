@@ -1,7 +1,7 @@
 
 import PageTopSection from "../components/PageTopSection";
-import ECODSection from "../ecod/ECODSection";
-import SectionTwo from "../ecod/SectionTwo";
+import ECODSection from "./ECODSection";
+import SectionTwo from "./SectionTwo";
 import BenefitsSection from "./BenefitsSection";
 import EnergyOptimizationSection from "./EnergyOptimizationSection";
 import WorkingPrincipleSection from "./WorkingPrincipleSection";

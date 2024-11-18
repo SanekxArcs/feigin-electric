@@ -23,7 +23,7 @@ const plLang = {
         "Utrzymuje optymalne poziom napięcia",
         "Wydłuża żywotność urządzeń",
         "Chroni przed przepięciami",
-        "Zwiększa efektywność instalacji fotowoltaicznych",
+        "Zwiększa efektywność instalacji fotowoltaicznych nawet o 52%",
         "Zmniejsza emisję CO2",
         "Pracuje bezobsługowo",
         "Doskonale integruje się z każdą instalacją",
@@ -41,7 +41,7 @@ const plLang = {
       features: [
         "Śledź parametry Twojego prądu z każdego miejsca na świecie",
         "Wykrywaj awarie, zaburzenia pracy, przypadkowo włączone urządzenia",
-        "ostęp online do pełnych wyników pomiarów na żywo",
+        "Dostep online do pełnych wyników pomiarów na żywo",
         "Dostęp online do pełnych, historycznych wyników pomiarów ",
         "Szeroki zakres pomiaru: 3-fazowe napięcie, natężenie, moc bierna, moc czynna, harmoniczne, itp.",
       ],
@@ -92,7 +92,7 @@ const ProductsSection = () => {
                 <li key={index}>{feature}</li>
               ))}
             </ul>
-            <TransitionLink href="/ecod">
+            <TransitionLink href="/ecod-smart-optimizer">
               <Button className="bg-red-200 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600 px-4 py-2 md:px-6 md:py-3">
                 {plLang.products.Ecod.button}
                 <ChevronRight />

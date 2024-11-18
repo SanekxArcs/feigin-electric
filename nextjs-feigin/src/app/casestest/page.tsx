@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { createClient } from "next-sanity";
 import { client } from "@/sanity/client";
 
 
@@ -38,7 +37,7 @@ function CaseCard({
           <div className="flex justify-center items-center">
             {imagelogo && (
               <Image
-                src={imagelogo}
+                src={imagelogo || "/default-logo.png"}
                 alt={title}
                 width={150}
                 height={150}
@@ -55,7 +54,7 @@ function CaseCard({
             className="h-4 w-auto"
             width={100}
             height={32}
-            src={imagelogo}
+            src={imagelogo || "/default-logo.png"}
             alt="Company Logo"
           />
         </div>

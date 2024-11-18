@@ -48,7 +48,7 @@ const problems = [
     icon: Sparkles,
     title: "Moc bierna",
     description:
-      "Kąt fazowy między przebiegami prądu i napięcia w systemie prądu przemiennego. Służy do wytwarzania pola magnetycznego w silnikach, powodując niekorzystny współczynnik mocy.",
+      "Kąt fazowy między przepływem prądu i napięcia w systemie prądu przemiennego. Służy do wytwarzania pola magnetycznego w silnikach, powodując niekorzystny współczynnik mocy.",
     bgColor: "fred-50",
     iconBgColor: "fred-100",
     textColor: "fred-700",

@@ -15,9 +15,9 @@ import { ToastAction } from "@/components/ui/toast";
 const navItems = [
   { href: "/", label: { en: "Home", pl: "Główna" } },
   { href: "/about", label: { en: "About Us", pl: "O Nas" } },
-  { href: "/ecod", label: { en: "ECOD", pl: "ECOD" } },
+  { href: "/ecod-smart-optimizer", label: { en: "ECOD", pl: "ECOD" } },
   // { href: "/acrel", label: { en: "Acrel", pl: "Acrel" } },
-  { href: "/cases", label: { en: "Cases", pl: "Wdrożenia" } },
+  { href: "/case-studies", label: { en: "Cases", pl: "Wdrożenia" } },
   { href: "/blog", label: { en: "Blog", pl: "Blog" } },
   { href: "/contact", label: { en: "Contact", pl: "Kontakt" } },
 ];

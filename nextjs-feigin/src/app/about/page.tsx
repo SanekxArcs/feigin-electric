@@ -5,7 +5,6 @@ import PageTopSection from "../components/PageTopSection";
 import AboutPhoto from "../assets/about/store-front-singapore.webp";
 import OurPartners from "../homecomponents/OurClients";
 import CallToActionSection from "../homecomponents/CallToActionSection";
-import { title } from "process";
 import HighlightedText from "../components/HighlightedText";
 
 const plLang = {
@@ -16,9 +15,8 @@ const plLang = {
     title: "Nasza historia",
     title2: "Prowadzenie udanego biznesu",
     title3: "od 2014 roku",
+    description: "Lev Feigin, wiodący specjalista ds. technologii energetycznych, który zajmował wysokie stanowiska w sektorze energetyki jądrowej i lotniczej, opracował podstawy naszej technologii, które po raz pierwszy zostały opisane w 1995 roku.",
     content: {
-      first:
-        "Lev Feigin, wiodący specjalista ds. technologii energetycznych, który zajmował wysokie stanowiska w sektorze energetyki jądrowej i lotniczej, opracował podstawy naszej technologii, które po raz pierwszy zostały opisane w 1995 roku.",
       second:
         "Utworzenie laboratorium do testowania i analizy komponentów było kolejnym logicznym krokiem w opracowaniu urządzenia optymalizacyjnego, które, dzięki szeregowi ulepszeń i aktualizacji modeli, zaowocowało dzisiejszą opatentowaną technologią i linią modeli ECOD.",
       third:
@@ -26,7 +24,7 @@ const plLang = {
       fourth:
         "Rozpoznając, że osiągnięcie doskonałości wymaga niezachwianej poświęconej pracy, Feigin Electric podjął się nieustającego dążenia do doskonałości. Ustanowienie kompleksowych strategii zaangażowania klientów było kolejnym logicznym krokiem w ulepszaniu naszych usług, które, dzięki serii innowacyjnych rozwiązań, zaowocowało bezprecedensowym podejściem zorientowanym na klienta, które definiuje naszą firmę dzisiaj.",
       fifth:
-        "Nasi klienci to fabryki, linie produkcyjne, hotele, stacje benzynowe, hrabstwa, sieci restauracji fast food i dystrybutorzy energii o nazwach takich jak: Burger King, KFC, McDonald's, The Pizza Company, Lion Group, Chester's Grill, Pizza Hut, Sturgeon Farm Hua Hin Thailand, Domino's Pizza i BreadTalk, że wymienię tylko kilka.",
+        "Nasi klienci to fabryki, linie produkcyjne, hotele, stacje benzynowe, sieci restauracji fast food i dystrybutorzy energii o nazwach takich jak: Burger King, KFC, McDonald's, The Pizza Company, Lion Group, Chester's Grill, Pizza Hut, Sturgeon Farm Hua Hin Thailand, Domino's Pizza i BreadTalk, że wymienię tylko kilka.",
     },
   },
 };
@@ -64,7 +62,7 @@ const About = () => {
               {plLang.ourStory.title3}
             </h3>
             <p className="text-lg md:text-xl mb-4 md:mb-6 text-gray-600 text-balance">
-              {plLang.ourStory.content.first}
+              {plLang.ourStory.description}
             </p>
           </div>
           {/* Image */}

@@ -13,6 +13,7 @@ const OurPartners = () => {
   const logosDir = path.join(process.cwd(), "public", "logos");
   const files = fs.readdirSync(logosDir);
   const logos = files.map((file) => `/logos/${file}`);
+  
   return (
     <section className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
