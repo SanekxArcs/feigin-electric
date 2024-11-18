@@ -17,6 +17,7 @@ const navItems = [
   { href: "/about", label: { en: "About Us", pl: "O Nas" } },
   { href: "/ecod-smart-optimizer", label: { en: "ECOD", pl: "ECOD" } },
   // { href: "/acrel", label: { en: "Acrel", pl: "Acrel" } },
+  { href: "/recognitions", label: { en: "Recognitions", pl: "Recognitions" } },
   { href: "/case-studies", label: { en: "Cases", pl: "Wdrożenia" } },
   { href: "/blog", label: { en: "Blog", pl: "Blog" } },
   { href: "/contact", label: { en: "Contact", pl: "Kontakt" } },
