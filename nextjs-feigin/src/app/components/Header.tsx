@@ -16,7 +16,7 @@ const navItems = [
   { href: "/", label: { en: "Home", pl: "Główna" } },
   { href: "/about", label: { en: "About Us", pl: "O Nas" } },
   { href: "/products", label: { en: "Products", pl: "Produkty" } },
-  { href: "/recognitions", label: { en: "Recognitions", pl: "Recognitions" } },
+  { href: "/recognitions", label: { en: "Recognitions", pl: "Uznania" } },
   { href: "/case-studies", label: { en: "Cases", pl: "Wdrożenia" } },
   { href: "/blog", label: { en: "Blog", pl: "Blog" } },
   { href: "/contact", label: { en: "Contact", pl: "Kontakt" } },
