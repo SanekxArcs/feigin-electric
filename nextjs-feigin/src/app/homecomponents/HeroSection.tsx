@@ -21,19 +21,21 @@ const HeroSection = () => {
           alt="Background"
           layout="fill"
           objectFit="cover"
+          className=" animate-pulse"
         />
       </div>
       <div className="container mx-auto px-6 flex flex-col items-center justify-center h-[90vh] relative z-10">
+        
         <Image
           src={FeiginElectricLogo}
           alt="Feigin Electric"
           className="h-32 w-auto md:h-48 lg:h-64"
         />
-        <div className="flex flex-col items-end w-full md:w-3/4 lg:w-1/2">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-right text-fgreen-800 mb-4 md:mb-6">
+        <div className="flex flex-col items-end w-full  md:w-3/4 lg:w-2/3">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-right text-fgreen-800 mb-4 md:mb-6 select-none">
             {plLang.title}
           </h1>
-          <p className="text-base md:text-lg lg:text-xl text-right mb-6 md:mb-8">
+          <p className="text-base text-balance md:text-lg lg:text-xl text-right mb-6 md:mb-8 select-none">
             {plLang.description}
           </p>
           <TransitionLink href="/products">

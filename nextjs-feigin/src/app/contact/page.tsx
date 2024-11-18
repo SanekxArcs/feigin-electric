@@ -11,6 +11,7 @@ import middleEast from "../assets/contact/middleEast.webp";
 import ContactForm from "../components/ContactForm";
 
 import { StaticImageData } from "next/image";
+import HighlightedText from "../components/HighlightedText";
 
 interface OfficeCardProps {
   imageSrc: StaticImageData;
@@ -18,6 +19,8 @@ interface OfficeCardProps {
   officeName: string;
   officeTitleFirm: string;
   officeTrading?: string;
+  OfficeTelSale?: string;
+  OfficeTelTech?: string;
   officeMail?: string;
   officeWeb?: string;
 }
@@ -30,6 +33,8 @@ const offices = [
     officeDetails: {
       titleFirm: "Feigin Electric Sp z o.o. (Poland)",
       tradeLicense: "NIP: 9512603226",
+      telSale: "+48 503 333 856",
+      telTech: "+48 607 111 541",
       email: "office@feiginelectric.com",
       web: "https://feiginelectric.pl",
     },
@@ -83,6 +88,8 @@ const OfficeCard: React.FC<OfficeCardProps> = ({
   officeName,
   officeTitleFirm,
   officeTrading,
+  OfficeTelSale,
+  OfficeTelTech,
   officeMail,
   officeWeb,
 }) => (
@@ -95,22 +102,50 @@ const OfficeCard: React.FC<OfficeCardProps> = ({
       height={320}
     />
     <div>
-      <h6 className="text-lg font-semibold mb-2">{officeName}</h6>
+      <h6 className="text-lg font-semibold mb-2 select-none">{officeName}</h6>
       <div className="text-sm text-gray-600">
-        <p>{officeTitleFirm}</p>
-        {officeTrading && <p>{officeTrading}</p>}
+        <p className=" select-none">{officeTitleFirm}</p>
+        {officeTrading && <p className=" select-none">{officeTrading}</p>}
+        {OfficeTelSale && (
+          <p>
+            <span className=" select-none">Sale:</span>
+            <Link
+              href={`tel:${OfficeTelSale}`}
+              className="text-blue-500 hover:text-blue-700 focus:text-blue-700"
+            >
+              {OfficeTelSale}
+            </Link>
+          </p>
+        )}
+        {OfficeTelTech && (
+          <p>
+            <span className=" select-none">Tech:</span>
+            <Link
+              href={`tel:${OfficeTelTech}`}
+              className="text-blue-500 hover:text-blue-700 focus:text-blue-700"
+            >
+              {OfficeTelTech}
+            </Link>
+          </p>
+        )}
         {officeMail && (
           <p>
-            Email:
-            <a href={`mailto:${officeMail}`} className="text-blue-500">
+            <span className=" select-none">Email:</span>
+            <Link
+              href={`mailto:${officeMail}`}
+              className="text-blue-500 hover:text-blue-700 focus:text-blue-700"
+            >
               {officeMail}
-            </a>
+            </Link>
           </p>
         )}
         {officeWeb && (
           <p>
-            Web:{" "}
-            <Link href={officeWeb} className="text-blue-500">
+            <span className=" select-none">Web:</span>
+            <Link
+              href={officeWeb}
+              className="text-blue-500 hover:text-blue-700 focus:text-blue-700"
+            >
               {officeWeb}
             </Link>
           </p>
@@ -133,11 +168,11 @@ export default function Contact() {
 
       <div className="md:container mx-auto py-12 px-4 md:px-8">
         <h5 className="text-2xl font-bold mb-8 text-center">
-          <span className="relative inline-block text-fred-950">
-            {plLang.salesOffices}
-            <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-200 rounded-md z-10"></span>
-          </span>
-          
+          <HighlightedText
+            title={plLang.salesOffices}
+            colorLine="bg-fred-100"
+            colorText="text-fred-950"
+          />
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {offices.map((office, index) => (
@@ -151,6 +186,8 @@ export default function Contact() {
                 officeName={office.title}
                 officeTitleFirm={office.officeDetails.titleFirm}
                 officeTrading={office.officeDetails.tradeLicense}
+                OfficeTelSale={office.officeDetails.telSale}
+                OfficeTelTech={office.officeDetails.telTech}
                 officeMail={office.officeDetails.email}
                 officeWeb={office.officeDetails.web}
               />

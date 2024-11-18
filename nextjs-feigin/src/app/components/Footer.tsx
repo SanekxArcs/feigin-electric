@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Content */}
-      <div className="relative container mx-auto px-4 mb-12 md:mb-0 ">
+      <div className="relative container mx-auto px-4 mb-12 md:mb-0 select-none">
         <p className="text-secondary text-center">
           © {currentYear} Feigin Electric Sp. z o.o. Wszelkie prawa
           zastrzeżone.

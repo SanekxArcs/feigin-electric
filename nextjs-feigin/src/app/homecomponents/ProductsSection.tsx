@@ -56,7 +56,11 @@ const ProductsSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-10 md:mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-center">
-            <HighlightedText title={plLang.title} colorLine="bg-fred-100" colorText="text-fred-950"/>
+            <HighlightedText
+              title={plLang.title}
+              colorLine="bg-fred-100"
+              colorText="text-fred-950"
+            />
           </h2>
         </div>
 
@@ -69,13 +73,13 @@ const ProductsSection = () => {
               className="h-72 md:h-96 w-full md:w-auto object-contain"
             />
             <div className="absolute inset-0 flex justify-center items-center -z-10">
-              <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96"></div>
-              <div className="bg-fred-200 rounded-full w-56 h-56 md:w-72 md:h-72 absolute"></div>
-              <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute"></div>
+              <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96 animate-pulse anim"></div>
+              <div className="bg-fred-200 rounded-full w-56 h-56 md:w-72 md:h-72 absolute animate-pulse"></div>
+              <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute animate-pulse"></div>
             </div>
           </div>
           <div className="md:w-1/2 w-full md:pl-12 mt-6 md:mt-0 text-center md:text-left">
-            <h3 className="text-4xl md:text-6xl font-bold mb-4">
+            <h3 className="text-4xl md:text-6xl font-bold mb-4 select-none">
               <span className="text-fred-600">
                 {plLang.products.Ecod.title.first}
               </span>
@@ -84,10 +88,10 @@ const ProductsSection = () => {
               </span>
               <br /> {plLang.products.Ecod.title.third}
             </h3>
-            <p className="mb-4 text-lg md:text-xl font-medium text-gray-800">
+            <p className="mb-4 text-lg md:text-xl font-medium text-gray-800 select-none">
               {plLang.products.Ecod.description}
             </p>
-            <ul className="list-disc pl-5 mb-6 text-left space-y-2 text-sm md:text-base">
+            <ul className="list-disc pl-5 mb-6 text-left space-y-2 text-sm md:text-base select-none">
               {plLang.products.Ecod.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -104,7 +108,7 @@ const ProductsSection = () => {
         {/* ACREl */}
         <div className="product-item flex flex-col-reverse md:flex-row items-center my-10 md:my-20">
           <div className="md:w-1/2 w-full md:pl-12 mt-6 md:mt-0 text-center md:text-left">
-            <h3 className="text-4xl md:text-6xl font-bold mb-4">
+            <h3 className="text-4xl md:text-6xl font-bold mb-4 select-none">
               <span className="text-fred-600">
                 {plLang.products.Acrel.title.first}
               </span>
@@ -113,10 +117,10 @@ const ProductsSection = () => {
               </span>
               <br /> {plLang.products.Acrel.title.third}
             </h3>
-            <p className="mb-4 text-lg md:text-xl font-medium">
+            <p className="mb-4 text-lg md:text-xl font-medium select-none">
               {plLang.products.Acrel.description}
             </p>
-            <ul className="list-disc  text-left pl-5 mb-6 space-y-2 text-sm md:text-base">
+            <ul className="list-disc  text-left pl-5 mb-6 space-y-2 text-sm md:text-base  select-none">
               {plLang.products.Acrel.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
@@ -134,9 +138,9 @@ const ProductsSection = () => {
               className="h-72 md:h-96 w-full md:w-auto object-contain"
             />
             <div className="absolute inset-0 flex justify-center items-center -z-10">
-              <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96"></div>
-              <div className="bg-fred-200 rounded-full w-56 h-56 md:w-72 md:h-72 absolute"></div>
-              <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute"></div>
+              <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96 animate-pulse"></div>
+              <div className="bg-fred-200 rounded-full w-56 h-56 md:w-72 md:h-72 absolute animate-pulse"></div>
+              <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute animate-pulse"></div>
             </div>
           </div>
         </div>

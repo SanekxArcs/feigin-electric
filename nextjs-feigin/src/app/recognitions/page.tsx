@@ -78,10 +78,10 @@ export default async function IndexPage() {
                       {new Date(recognition.publishedAt).toLocaleDateString()}
                     </time>
 
-                    <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
+                    <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white line-clamp-2">
                       {recognition.title}
                     </h3>
-                    <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+                    <div className="mt-2 line-clamp-2 text-sm/relaxed text-gray-500 dark:text-gray-400">
                       <PortableText value={recognition.body} />
                     </div>
                   </div>

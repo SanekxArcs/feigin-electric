@@ -1,6 +1,7 @@
 import { TransitionLink } from "./utils/TransitionLink";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
+import HighlightedText from "./HighlightedText";
 
 interface NavItemProps {
   href: string;
@@ -17,11 +18,11 @@ export default function NavItem({ href, label, className = "" }: NavItemProps) {
   return (
     <Button
       variant="link"
-      className={`hover:text-fgreen-800 font-bold ${className}
+      className={`hover:text-fgreen-800 font-bold p-1 xl:p-2 ${className}
           ${pathname === href ? "text-primary " : " text-muted-foreground "}`}
     >
       <TransitionLink href={href} onClick={() => handleLinkClick(href)}>
-        {label}
+        {pathname === href ? <HighlightedText title={label} borderSize="h-0.5"/> : label }
       </TransitionLink>
     </Button>
   );

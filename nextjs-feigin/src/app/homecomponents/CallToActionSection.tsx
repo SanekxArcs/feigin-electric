@@ -36,7 +36,7 @@ export default function CallToActionSection() {
             colorText="text-fred-950"
           />
         </h2>
-        <p className="text-lg md:text-xl text-fred-900 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-fred-900 max-w-2xl mx-auto select-none text-balance">
           {plLang.description}
         </p>
 
@@ -92,7 +92,7 @@ function ContactButton({ href, icon, label, description, className }: ContactBut
       <div className="text-4xl">{icon}</div>
       <div>
         <h3 className="text-xl font-semibold">{label}</h3>
-        <p className="text-fred-50 text-xs">{description}</p>
+        <p className="text-fred-50 text-xs select-none">{description}</p>
       </div>
     </Link>
   );

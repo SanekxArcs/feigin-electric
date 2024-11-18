@@ -3,27 +3,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function ContactForm() {
-  const [klientName, setKlientName] = useState("");
-  const [klientLastname, setKlientLastname] = useState("");
+  const [clientName, setClientName] = useState("");
+  const [clientLastName, setClientLastName] = useState("");
   const [mail, setMail] = useState("");
-  const [telefon, setTelefon] = useState("");
-  const [typ, setTyp] = useState("");
-  const [rachunek, setRachunek] = useState("");
   const [textToMessage, setTextToMessage] = useState("");
   const [checkbox, setCheckbox] = useState(false);
 
   const clean = () => {
-    setKlientName("");
-    setKlientLastname("");
+    setClientName("");
+    setClientLastName("");
     setMail("");
-    setTelefon("");
-    setRachunek("");
-    setTyp("");
     setTextToMessage("");
     setCheckbox(false);
   };
 
-  const submitSubjectName = `Contact od klienta! ${klientLastname} ${klientName}`;
+  const submitSubjectName = `Contact od klienta! ${clientLastName} ${clientName}`;
 
   interface InputChangeEvent {
     target: {
@@ -48,38 +42,43 @@ function ContactForm() {
           className="max-w-7xl p-7 rounded shadow-md mx-auto bg-gradient-to-br from-fred-50 to-fred-200 shadow-fred-100 ring ring-fred-200"
         >
           <form
-            action="https://formsubmit.co/d6c7e0c47156a06e7321617dac55cdac"
+            action="https://formsubmit.co/kontakt@feiginelectric.com"
             name="contact"
             method="POST"
             data-netlify="true"
           >
-            <input type="hidden" name="_template" value="table" />
             <input
               type="hidden"
               name="_next"
               value="https://feiginelectric.pl/thanks"
             />
-            <input type="text" name="_honey" className="hidden" />
             <input type="hidden" name="_subject" value={submitSubjectName} />
+            <input
+              type="hidden"
+              name="_cc"
+              value="o.dzisiak+websitepl@feiginelectric.com"
+            ></input>
             <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" className="hidden" />
+            <input type="hidden" name="_template" value="basic" />
 
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 mb-7">
               <div className="flex flex-col gap-7">
                 {renderInputField({
                   placeholder: "Imię",
-                  value: klientName,
-                  onChange: handleInputChange(setKlientName),
+                  value: clientName,
+                  onChange: handleInputChange(setClientName),
                   id: "Imię",
                   type: "text",
-                  required: true
+                  required: true,
                 })}
                 {renderInputField({
                   placeholder: "Nazwisko",
-                  value: klientLastname,
-                  onChange: handleInputChange(setKlientLastname),
+                  value: clientLastName,
+                  onChange: handleInputChange(setClientLastName),
                   id: "Nazwisko",
                   type: "text",
-                  required: true
+                  required: true,
                 })}
                 {renderInputField({
                   placeholder: "E-mail",
@@ -87,7 +86,7 @@ function ContactForm() {
                   onChange: handleInputChange(setMail),
                   id: "E-mail",
                   type: "email",
-                  required: true
+                  required: true,
                 })}
               </div>
               <div className="flex flex-col gap-7">
@@ -107,7 +106,6 @@ function ContactForm() {
                   >
                     Wiadomosc
                   </label>
-                  
                 </div>
               </div>
             </div>
@@ -144,10 +142,11 @@ function ContactForm() {
                     </svg>
                   </div>
                 </label>
-                <p className="text-xs md:text-sm lg:text-base">
-                  <span className="text-red-500">*</span> Wyrażam zgodę na
-                  przetwarzanie przez  Feigin Electric danych personalnych w
-                  formularzu kontaktowym w celu wykonania i przesłania oferty.
+                <p className="text-xs md:text-sm lg:text-base select-none">
+                  <span className="text-red-500 ">*</span> Wyrażam zgodę na
+                  przetwarzanie przez Feigin Electric Sp z o.o. danych
+                  personalnych w formularzu kontaktowym w celu wykonania i
+                  przesłania oferty.
                 </p>
               </div>
               <div className="flex gap-2">
@@ -172,13 +171,7 @@ function ContactForm() {
                     />
                   </svg>
                 </button>
-                {(rachunek ||
-                  typ ||
-                  telefon ||
-                  mail ||
-                  klientLastname ||
-                  klientName ||
-                  textToMessage) && (
+                {(mail || clientLastName || clientName || textToMessage) && (
                   <motion.a
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}

@@ -57,7 +57,12 @@ export default async function RecognitionsPage({
   const mainImageUrl = mainImage
     ? urlFor(mainImage)?.width(800).height(400).url()
     : null;
-  const formattedDate = new Date(publishedAt).toDateString();
+    const formattedDate = new Date(publishedAt).toLocaleDateString("pl-PL", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   const components = {
     types: {
@@ -115,7 +120,7 @@ export default async function RecognitionsPage({
               )} */}
               {formattedDate && (
                 <div className="text-sm text-gray-500 md:text-base">
-                  Published on: {formattedDate}
+                  Publikowane: {formattedDate}
                 </div>
               )}
               {tags && tags.length > 0 && (
@@ -129,7 +134,7 @@ export default async function RecognitionsPage({
               )}
             </div>
             {body && (
-              <div className="prose max-w-none prose-sm md:prose-base lg:prose-lg">
+              <div className="prose max-w-none prose-sm md:prose-base lg:prose-lg text-balance">
                 <PortableText value={body} components={components} />
               </div>
             )}

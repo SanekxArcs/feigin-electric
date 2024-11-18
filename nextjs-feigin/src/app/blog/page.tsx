@@ -73,7 +73,7 @@ export default async function IndexPage() {
                       {new Date(post.publishedAt).toLocaleDateString()}
                     </time>
 
-                    <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
+                    <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white line-clamp-2">
                       {post.title}
                     </h3>
                     <div className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">

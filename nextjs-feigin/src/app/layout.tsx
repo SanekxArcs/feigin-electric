@@ -90,8 +90,6 @@ export default function RootLayout({
           
           <Footer />
           <ScrollToTopButton />
-          <SanityLive />
-          
           
         </body>
       </html>

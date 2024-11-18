@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { TransitionLink } from "./utils/TransitionLink";
 import NavItem from "./NavItem";
 import { Button } from "@/components/ui/button";
@@ -14,23 +15,26 @@ import { useToast } from "@/hooks/use-toast";
 const navItems = [
   { href: "/", label: { en: "Home", pl: "Główna" } },
   { href: "/about", label: { en: "About Us", pl: "O Nas" } },
-  { href: "/ecod-smart-optimizer", label: { en: "ECOD", pl: "ECOD" } },
-  // { href: "/acrel", label: { en: "Acrel", pl: "Acrel" } },
-  // { href: "/recognitions", label: { en: "Recognitions", pl: "Recognitions" } },
+  { href: "/products", label: { en: "Products", pl: "Produkty" } },
+  { href: "/recognitions", label: { en: "Recognitions", pl: "Recognitions" } },
   { href: "/case-studies", label: { en: "Cases", pl: "Wdrożenia" } },
   { href: "/blog", label: { en: "Blog", pl: "Blog" } },
   { href: "/contact", label: { en: "Contact", pl: "Kontakt" } },
 ];
 
 const plLang = {
-  ctaButton: "Monitoring Online",
+  ctaButton: "Feigin EMS",
   toast: "Już jesteś na polskiej wersji strony."
 };
 
 export default function Header() {
+  const pathname = usePathname() ;
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const { toast } = useToast();
+
+    const baseUrl = "https://feiginelectric.com";
+    const fullUrl = `${baseUrl}${pathname === "/" ? "" : pathname}`;
 
   const handlePolishClick = () => {
     toast({
@@ -87,7 +91,13 @@ export default function Header() {
                 </Button>
                 <div className="absolute overflow-hidden right-0 mt-2 w-24 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <TransitionLink
-                    href="https://feiginelectric.com"
+                    href={
+                      pathname.startsWith("/blog")
+                        ? "/blog"
+                        : pathname.startsWith("/recognitions")
+                          ? "/recognitions"
+                          : fullUrl
+                    }
                     className="flex items-center space-x-2 px-4 py-2 hover:bg-fred-200"
                   >
                     <Image src={enFlag} alt="English" width={24} height={24} />
@@ -180,7 +190,13 @@ export default function Header() {
                   <span>PL</span>
                 </div>
                 <TransitionLink
-                  href="https://feiginelectric.com"
+                  href={
+                    pathname.startsWith("/blog")
+                      ? "https://feiginelectric.com/blog"
+                      : pathname.startsWith("/recognitions")
+                        ? "https://feiginelectric.com/recognitions"
+                        : fullUrl
+                  }
                   className="flex items-center space-x-2 px-4 rounded-md py-2 hover:bg-gray-100"
                 >
                   <Image src={enFlag} alt="English" width={24} height={24} />

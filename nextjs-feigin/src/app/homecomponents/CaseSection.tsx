@@ -38,7 +38,7 @@ const CaseSection = () => {
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-16">
           <div className="md:hidden text-center mb-6">
             <h2 className="text-4xl font-bold">
-              <HighlightedText title={plLang.title} colorLine="bg-fgreen-300" />
+              <HighlightedText title={plLang.title} colorLine="bg-fgreen-200" />
             </h2>
           </div>
           <div className="md:w-1/2 mb-8 md:mb-0 grid place-content-end">
@@ -53,15 +53,12 @@ const CaseSection = () => {
 
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="hidden md:block text-4xl font-bold text-left mb-12">
-              <span className="relative inline-block text-fgreen-950">
-                {plLang.title}
-                <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-200 rounded-md z-10"></span>
-              </span>
+              <HighlightedText title={plLang.title} colorLine="bg-fgreen-200" />
             </h2>
-            <p className="mb-8">{plLang.description}</p>
-            <blockquote className="italic text-lg mb-8 bg-white p-4 rounded-lg shadow-sm">
+            <p className="mb-8 select-none">{plLang.description}</p>
+            <blockquote className="italic text-lg mb-8 bg-white p-4 rounded-lg shadow-sm  select-none">
               {plLang.quote.text}
-              <span className='block mt-2 font-bold text-base'>
+              <span className="block mt-2 font-bold text-base">
                 {plLang.quote.author}
               </span>
             </blockquote>
@@ -74,7 +71,7 @@ const CaseSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-16 text-center">
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-16 text-center  select-none">
           <div className="flex flex-col items-center">
             <h3 className="text-4xl font-bold text-fgreen-600">
               {plLang.statistics.savings.value}
