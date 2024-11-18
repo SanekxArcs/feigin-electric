@@ -57,7 +57,7 @@ export default async function IndexPage() {
         <ul className="grid gap-4 grid-cols-1 md:grid-cols-3">
           {recognitions.map((recognition) => (
             <li key={recognition._id}>
-              <Link href={`/blog/${recognition?.slug?.current}`}>
+              <Link href={`/recognitions/${recognition?.slug?.current}`}>
                 <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg dark:shadow-gray-700/25">
                   <Image
                     id="mainImage"
@@ -72,9 +72,7 @@ export default async function IndexPage() {
                   />
                   <div className="bg-white p-4 sm:p-6 dark:bg-gray-900">
                     <time
-                      dateTime={new Date(
-                        recognition.publishedAt
-                      ).toISOString()}
+                      dateTime={new Date(recognition.publishedAt).toISOString()}
                       className="block text-xs text-gray-500 dark:text-gray-400"
                     >
                       {new Date(recognition.publishedAt).toLocaleDateString()}
