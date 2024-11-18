@@ -45,9 +45,9 @@ export default async function IndexPage() {
   }
 
   const plLang = {
-    title: "Recognitions",
+    title: "Uznania",
     description:
-      "template description",
+      "Prezentujemy nasze nagrody, certyfikaty i referencje, które potwierdzają jakość oraz zaufanie, jakim darzą nas klienci i partnerzy biznesowi.",
   };
 
   return (
