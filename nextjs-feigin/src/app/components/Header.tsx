@@ -10,14 +10,13 @@ import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
 import plFlag from "../assets/flag/pl.svg";
 import enFlag from "../assets/flag/en.svg";
 import { useToast } from "@/hooks/use-toast";
-import { ToastAction } from "@/components/ui/toast";
 
 const navItems = [
   { href: "/", label: { en: "Home", pl: "Główna" } },
   { href: "/about", label: { en: "About Us", pl: "O Nas" } },
   { href: "/ecod-smart-optimizer", label: { en: "ECOD", pl: "ECOD" } },
   // { href: "/acrel", label: { en: "Acrel", pl: "Acrel" } },
-  { href: "/recognitions", label: { en: "Recognitions", pl: "Recognitions" } },
+  // { href: "/recognitions", label: { en: "Recognitions", pl: "Recognitions" } },
   { href: "/case-studies", label: { en: "Cases", pl: "Wdrożenia" } },
   { href: "/blog", label: { en: "Blog", pl: "Blog" } },
   { href: "/contact", label: { en: "Contact", pl: "Kontakt" } },
@@ -174,7 +173,7 @@ export default function Header() {
               {/* Language Switcher */}
               <div className=" flex justify-center w-full pt-4 ">
                 <div
-                  className="flex items-center space-x-2 px-4 py-2 bg-fred-200"
+                  className="flex items-center rounded-md space-x-2 px-4 py-2 bg-fred-200"
                   onClick={handlePolishClick}
                 >
                   <Image src={plFlag} alt="Polish" width={24} height={24} />
@@ -182,7 +181,7 @@ export default function Header() {
                 </div>
                 <TransitionLink
                   href="https://feiginelectric.com"
-                  className="flex items-center space-x-2 px-4 py-2 hover:bg-gray-100"
+                  className="flex items-center space-x-2 px-4 rounded-md py-2 hover:bg-gray-100"
                 >
                   <Image src={enFlag} alt="English" width={24} height={24} />
                   <span>EN</span>
