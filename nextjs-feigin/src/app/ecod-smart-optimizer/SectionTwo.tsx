@@ -108,7 +108,7 @@ const problems = [
 
 const SectionTwo = () => {
   return (
-    <section className="container py-16">
+    <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">
           <span className="relative inline-block text-fred-950">

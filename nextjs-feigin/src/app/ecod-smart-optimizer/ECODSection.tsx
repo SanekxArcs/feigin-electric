@@ -23,8 +23,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
 const ECODSection = () => {
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16">
-      <div className="container max-w-6xl mx-auto text-center">
+    <section className="">
+      <div className="container  mx-auto text-center py-12 lg:py-20 px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           <span className="relative inline-block text-fgreen-950">
             Dlaczego <span className="text-fred-600 font-bold">EC</span>

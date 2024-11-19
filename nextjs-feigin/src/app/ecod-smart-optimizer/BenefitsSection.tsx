@@ -79,7 +79,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
 
 const BenefitsSection: React.FC = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-12">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
           <span className="relative inline-block text-fgreen-950">

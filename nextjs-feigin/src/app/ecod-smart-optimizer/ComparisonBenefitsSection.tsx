@@ -2,7 +2,7 @@ import React from 'react';
 
 const ComparisonBenefitsSection = () => {
   return (
-    <section className="container mx-auto px-4 py-10 my-20">
+    <section className="container mx-auto py-12 lg:py-20 px-4 ">
       <div className="text-center mb-8">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
           <span className="relative inline-block text-fgreen-950">

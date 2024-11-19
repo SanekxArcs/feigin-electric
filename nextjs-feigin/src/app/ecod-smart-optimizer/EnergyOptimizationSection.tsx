@@ -21,7 +21,7 @@ export default function EnergyOptimizationSection() {
   ];
 
   return (
-    <section className="container px-4 py-12 lg:py-20">
+    <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold">
           <span className="relative inline-block text-fgreen-950">
@@ -42,9 +42,7 @@ export default function EnergyOptimizationSection() {
         ))}
       </div>
       <div className="text-center mt-10">
-        <div
-          className="mx-auto container hidden md:flex items-center justify-center"
-        >
+        <div className="mx-auto container hidden md:flex items-center justify-center">
           <SvgIcon />
         </div>
         <p className="text-lg md:text-xl font-semibold text-gray-500 mt-4">

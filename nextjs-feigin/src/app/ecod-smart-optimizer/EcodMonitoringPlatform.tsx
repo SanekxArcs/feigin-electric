@@ -5,7 +5,7 @@ import monitoring from "../assets/ecod/monitoringPl.webp";
 
 const EcodMonitoringPlatform = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-8">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
           <span className="relative inline-block text-fgreen-950">
@@ -23,7 +23,7 @@ const EcodMonitoringPlatform = () => {
               <div className="text-balance">
                 <span className="font-bold">
                   Śledzenie zużycia energii na żywo:
-                </span>{" "}
+                </span>
                 Monitoruj swoje zużycie energii w czasie rzeczywistym, aż do
                 poziomu każdego urządzenia lub sprzętu.
               </div>

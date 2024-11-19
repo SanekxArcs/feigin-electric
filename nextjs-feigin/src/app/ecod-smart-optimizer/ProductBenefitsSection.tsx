@@ -35,10 +35,9 @@ const benefitsData = [
 
 const ProductBenefitsSection = () => {
   return (
-    <section className="container mx-auto px-4 py-10">
+    <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-8">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
-          
           <span className="relative inline-block text-fgreen-950">
             Wszystkie korzyści produktu
             <span className="absolute -bottom-1 left-0 w-full h-2 bg-fgreen-100 rounded-md"></span>

@@ -2,7 +2,7 @@ import React from "react";
 
 const PhotovoltaicsPerformanceSection = () => {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-8">
         <h2 className="text-fgreen-600 text-3xl md:text-4xl font-bold mb-4">
           <span className="relative inline-block text-fgreen-950">
