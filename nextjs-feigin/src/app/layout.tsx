@@ -81,6 +81,7 @@ export default function RootLayout({
           />
           <meta name="apple-mobile-web-app-title" content="Feigin Electric" />
           <link rel="manifest" href="/site.webmanifest" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
         </Head>
         <body
           className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}

@@ -26,8 +26,10 @@ export default function Ecod() {
   return (
     <>
       <PageTopSection title={plLang.title} description={plLang.description} />
-      {/* Dlaczego ECOD? */}
-      <ECODSection />
+      
+      <div id="ecod">
+        {/* Dlaczego ECOD? */}
+        <ECODSection />
       {/* Sześć najczęstszych problemów z jakością energii elektrycznej */}
       <SectionTwo />
       {/* Dlaczego optymalizacja energii jest ważna? */}
@@ -58,6 +60,8 @@ export default function Ecod() {
       <OurPartners />
       {/* Skontaktuj się z nami */}
       <CallToActionSection />
+      </div>
+      
     </>
   );
 }

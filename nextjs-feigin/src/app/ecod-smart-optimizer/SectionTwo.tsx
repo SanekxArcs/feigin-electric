@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { FC, ComponentType } from "react";
+import HighlightedText from "../components/HighlightedText";
 
 interface ProblemCardProps {
   icon: ComponentType<{ className?: string }>;
@@ -42,6 +43,12 @@ const ProblemCard: FC<ProblemCardProps> = ({
     <p className="text-gray-600">{description}</p>
   </div>
 );
+
+const plLang = {
+  title: "Sześć najczęstszych problemów z jakością energii elektrycznej",
+  description:
+    "Poznaj najczęstsze problemy, które mogą wpływać na jakość energii elektrycznej oraz ich przyczyny.",
+};
 
 const problems = [
   {
@@ -111,14 +118,10 @@ const SectionTwo = () => {
     <section className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">
-          <span className="relative inline-block text-fred-950">
-            Sześć najczęstszych problemów z jakością energii elektrycznej
-            <span className="absolute -bottom-1 left-0 w-full h-2 bg-fred-200 rounded-md z-10"></span>
-          </span>
+          <HighlightedText title={plLang.title} colorLine="bg-fred-100" colorText="text-fred-950" />
         </h2>
         <p className="text-lg text-gray-700">
-          Poznaj najczęstsze problemy, które mogą wpływać na jakość energii
-          elektrycznej oraz ich przyczyny.
+          {plLang.description}
         </p>
       </div>
 

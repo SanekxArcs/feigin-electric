@@ -1,6 +1,7 @@
+"use client"
 import React from "react";
-import { Icon as LucideIcon } from "lucide-react";
 import { BatteryCharging, Monitor, Shield, Sun, Wrench } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Benefit = {
   icon: React.ReactNode;
@@ -79,7 +80,14 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
 
 const BenefitsSection: React.FC = () => {
   return (
-    <section className="container mx-auto py-12 lg:py-20 px-4">
+    <>
+    <AnimatePresence>
+    <motion.section 
+    initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true }} 
+          className="container mx-auto py-12 lg:py-20 px-4">
       <div className="text-center mb-12">
         <h2 className="text-fred-600 text-3xl font-bold mb-4">
           <span className="relative inline-block text-fgreen-950">
@@ -94,7 +102,10 @@ const BenefitsSection: React.FC = () => {
           <BenefitCard key={index} {...benefit} />
         ))}
       </div>
-    </section>
+    </motion.section>
+    </AnimatePresence>
+    </>
+    
   );
 };
 
