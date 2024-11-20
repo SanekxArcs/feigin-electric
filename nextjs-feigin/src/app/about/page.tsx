@@ -6,6 +6,41 @@ import AboutPhoto from "../assets/about/store-front-singapore.webp";
 import OurPartners from "../homecomponents/OurClients";
 import CallToActionSection from "../homecomponents/CallToActionSection";
 import HighlightedText from "../components/HighlightedText";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "O nas | Feigin Electric",
+  description:
+    "Dowiedz się więcej o firmie Feigin Electric - nasza historia, wizja, misja i sukcesy. Poznaj naszą działalność i wartości, które definiują nas od 2014 roku.",
+  openGraph: {
+    title: "O nas | Feigin Electric",
+    description:
+      "Poznaj historię Feigin Electric - firmę, która od 2014 roku dostarcza innowacyjne rozwiązania w sektorze energetycznym. Dowiedz się więcej o naszej wizji, misji i globalnym zasięgu.",
+    url: "https://feiginelectric.com/o-nas",
+    type: "website",
+    images: [
+      {
+        url: "https://feiginelectric.com/images/our-company-history.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nasza historia - Feigin Electric",
+      },
+      {
+        url: "https://feiginelectric.com/images/our-partners.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nasi partnerzy - Feigin Electric",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "O nas | Feigin Electric",
+    description:
+      "Poznaj historię, misję i wizję Feigin Electric - lidera w innowacjach energetycznych od 2014 roku.",
+    images: ["https://feiginelectric.com/images/our-company-history.jpg"],
+  },
+};
 
 const plLang = {
   title: "O nas",

@@ -16,6 +16,39 @@ import feiginelectricAnalizator2 from "../assets/analizator/left.webp";
 import OurPartners from "../homecomponents/OurClients";
 import CallToActionSection from "../homecomponents/CallToActionSection";
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Analizator Energii Online - Feigin Electric FE-PM-300",
+  description:
+    "Poznaj Feigin Electric FE-PM-300 - analizator energii online, który umożliwia świadome korzystanie z prądu, zapewniając precyzyjne pomiary i optymalizację zużycia energii.",
+  keywords:
+    "Feigin Electric, analizator energii, FE-PM-300, zarządzanie energią, optymalizacja zużycia, bezprzewodowy licznik energii, monitorowanie energii, pomiar trójfazowy",
+  authors: [{ name: "Oleksandr Dzisiak" }],
+  openGraph: {
+    title: "Analizator Energii Online - Feigin Electric FE-PM-300",
+    description:
+      "Świadomie korzystaj z prądu dzięki Feigin Electric FE-PM-300 - zaawansowanemu analizatorowi energii online.",
+    url: "https://feiginelectric.pl/feigin-analizator-energii-online",
+    type: "website",
+    images: [
+      {
+        url: "https://feiginelectric.pl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwireless-electricity-monitor.77aa7c8a.webp&w=640&q=75",
+        width: 800,
+        height: 600,
+        alt: "Feigin Electric FE-PM-300 - Front View",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Analizator Energii Online - Feigin Electric FE-PM-300",
+    description:
+      "Świadomie korzystaj z prądu dzięki Feigin Electric FE-PM-300 - zaawansowanemu analizatorowi energii online.",
+    images: ["https://feiginelectric.pl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwireless-electricity-monitor.77aa7c8a.webp&w=640&q=75"],
+  },
+};
+
 const AnalizatorEnergiiOnlinePage = () => {
   const plLang = {
     title: "Feigin Electric FE-PM-300",
@@ -206,6 +239,7 @@ const AnalizatorEnergiiOnlinePage = () => {
 
   return (
     <>
+      
       <PageTopSection title={plLang.title} description={plLang.description} />
       <div className="container mx-auto px-4 py-8 font-sans">
         {/* Sekcja 1 */}

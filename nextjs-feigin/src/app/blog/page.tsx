@@ -6,6 +6,36 @@ import { client } from "@/sanity/client";
 import { Image } from "next-sanity/image";
 import PageTopSection from "../components/PageTopSection";
 import { PortableText } from "@portabletext/react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Feigin Electric",
+  description:
+    "Czytaj nasze najnowsze wpisy na blogu o technologii, efektywności energetycznej i innowacyjnych wdrożeniach w branży energetycznej i spożywczej.",
+  openGraph: {
+    title: "Blog | Feigin Electric",
+    description:
+      "Poznaj naszą wizję i misję oraz przeczytaj o najnowszych wdrożeniach i technologiach w branży energetycznej.",
+    url: "https://feiginelectric.com/blog",
+    type: "website",
+    images: [
+      {
+        url: "https://feiginelectric.com/images/blog-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Blog Feigin Electric",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Feigin Electric",
+    description:
+      "Czytaj nasze najnowsze wpisy o efektywności energetycznej, innowacjach i wdrożeniach technologii.",
+    images: ["https://feiginelectric.com/images/blog-cover.jpg"],
+  },
+};
+ 
 
 const POSTS_QUERY = `*[
   _type == "post"

@@ -1,4 +1,3 @@
-"use client";
 
 import Image from "next/image";
 import PageTopSection from "../components/PageTopSection";
@@ -12,6 +11,35 @@ import ContactForm from "../components/ContactForm";
 
 import { StaticImageData } from "next/image";
 import HighlightedText from "../components/HighlightedText";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontakt | Feigin Electric",
+  description:
+    "Skontaktuj się z Feigin Electric – uzyskaj informacje o naszych produktach, wsparcie techniczne i znajdź lokalizacje naszych biur.",
+  openGraph: {
+    title: "Kontakt | Feigin Electric",
+    description:
+      "Skontaktuj się z naszym zespołem, aby uzyskać informacje o produktach, wsparcie techniczne lub poznać nasze biura w Europie, Azji i na Bliskim Wschodzie.",
+    url: "https://feiginelectric.com/kontakt",
+    type: "website",
+    images: [
+      {
+        url: "https://feiginelectric.com/images/contact-us.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kontakt Feigin Electric",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kontakt | Feigin Electric",
+    description:
+      "Nawiąż kontakt z Feigin Electric, aby uzyskać informacje o produktach, wsparcie techniczne lub dowiedzieć się więcej o naszych lokalizacjach.",
+    images: ["https://feiginelectric.com/images/contact-us.jpg"],
+  },
+};
 
 interface OfficeCardProps {
   imageSrc: StaticImageData;

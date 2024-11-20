@@ -29,6 +29,44 @@ import KFCImage from "../assets/cases/kfc.jpg";
 import SparImage from "../assets/cases/spar.jpg";
 import BreadTalkImage from "../assets/cases/breadTalk.jpg";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wdrożenia | Feigin Electric",
+  description:
+    "Poznaj nasze wdrożenia dla supermarketów, hoteli, restauracji szybkiej obsługi i fabryk. Oferujemy innowacyjne rozwiązania dla branży spożywczej, energetycznej i innych sektorów.",
+  openGraph: {
+    title: "Wdrożenia | Feigin Electric",
+    description:
+      "Dowiedz się, jak nasze wdrożenia technologii ECOD pomagają oszczędzać energię i podnosić efektywność w różnych sektorach – od supermarketów po fabryki.",
+    url: "https://feiginelectric.com/wdrozenia",
+    type: "website",
+    images: [
+      {
+        url: "https://feiginelectric.com/images/implementations.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wdrożenia Feigin Electric",
+      },
+      {
+        url: "https://feiginelectric.com/images/energy-solutions.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rozwiązania energetyczne Feigin Electric",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wdrożenia | Feigin Electric",
+    description:
+      "Odkryj nasze wdrożenia dla supermarketów, hoteli i fabryk, które pomagają oszczędzać energię i zwiększać efektywność.",
+    images: ["https://feiginelectric.com/images/implementations.jpg"],
+  },
+};
+
+
+
 interface CaseCardProps {
   title: string;
   imagelogo?: string;

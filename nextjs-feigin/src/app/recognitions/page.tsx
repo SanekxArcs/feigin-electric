@@ -5,6 +5,41 @@ import { client } from "@/sanity/client";
 import { Image } from "next-sanity/image";
 import PageTopSection from "../components/PageTopSection";
 import { PortableText } from "@portabletext/react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Uznania | Feigin Electric",
+  description:
+    "Prezentujemy nasze nagrody, certyfikaty i referencje, które potwierdzają jakość oraz zaufanie, jakim darzą nas klienci i partnerzy biznesowi.",
+  openGraph: {
+    title: "Uznania | Feigin Electric",
+    description:
+      "Poznaj nagrody, certyfikaty i referencje Feigin Electric, które potwierdzają nasze zaangażowanie w jakość, innowacyjność i zrównoważony rozwój.",
+    url: "https://feiginelectric.com/uznania",
+    type: "website",
+    images: [
+      {
+        url: "https://feiginelectric.com/images/awards-certificates.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nagrody i certyfikaty Feigin Electric",
+      },
+      {
+        url: "https://feiginelectric.com/images/business-partners.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Partnerzy biznesowi Feigin Electric",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uznania | Feigin Electric",
+    description:
+      "Odkryj nasze nagrody, certyfikaty i referencje, które świadczą o jakości i zaufaniu, jakim darzą nas klienci.",
+    images: ["https://feiginelectric.com/images/awards-certificates.jpg"],
+  },
+};
 
 const REKOGNITION_QUERY = `*[
   _type == "recognitions"
