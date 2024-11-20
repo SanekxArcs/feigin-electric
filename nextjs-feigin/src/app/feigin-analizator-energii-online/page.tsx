@@ -23,7 +23,7 @@ const AnalizatorEnergiiOnlinePage = () => {
     section1: {
       title: "Ogólne",
       description:
-        "Bezprzewodowy licznik pomiarowy ADW300 jest głównie używany do pomiaru trójfazowej energii czynnej w sieciach niskiego napięcia. Produkt wyróżnia się zaletami takimi jak kompaktowy rozmiar, wysoka precyzja oraz bogate funkcje. W zależności od różnych wymagań dostępne są liczne funkcje komunikacyjne, takie jak komunikacja RS485, LoRa, NB, 4G, WiFi, a także nowy tryb próbkowania prądu za pomocą zewnętrznego przekładnika. Może być elastycznie instalowany w rozdzielnicy, aby osiągnąć podlicznikowe pomiary energii elektrycznej, nadzór eksploatacyjny i konserwacyjny lub spełnić wymagania dotyczące monitorowania mocy dla różnych regionów i różnych obciążeń.",
+        "Bezprzewodowy licznik pomiarowy ADW300 jest głównie używany do pomiaru trójfazowej energii czynnej w sieciach niskiego napięcia. Produkt wyróżnia się zaletami takimi jak kompaktowy rozmiar, wysoka precyzja oraz wielofunkcyjność. W zależności od różnych wymagań dostępne są liczne funkcje komunikacyjne, takie jak komunikacja RS485, LoRa, NB, 4G, WiFi, a także nowy tryb analizowania prądu za pomocą zewnętrznego przekładnika. Może być elastycznie instalowany w rozdzielnicy, aby osiągnąć podlicznikowe pomiary energii elektrycznej, nadzór eksploatacyjny i konserwacyjny lub spełnić wymagania dotyczące monitorowania mocy dla różnych regionów i różnych obciążeń.",
     },
     section2: {
       title: "Feigin Electric FE-PM-300",
@@ -89,7 +89,6 @@ const AnalizatorEnergiiOnlinePage = () => {
         "Stałe identyfikowanie i wykorzystywanie potencjałów oszczędności.",
         "Przeprowadzanie analizy zużycia energii dla poszczególnych urządzeń przy użyciu jednego urządzenia pomiarowego.",
         "Dostęp do szczegółowej analizy kosztów i zużycia energii (w kWh).",
-        "Profilowa, wielowarstwowa optymalizacja, w tym wykrywanie faz.",
         "Niezależny od urządzenia dostęp do danych i kontrola za pośrednictwem aplikacji web i mobilnych Watt Analytics.",
       ],
       conclusion:
@@ -183,7 +182,7 @@ const AnalizatorEnergiiOnlinePage = () => {
       icon: PlugZap,
       title: "Monitorowanie i Alarmowanie",
       description:
-        "Oferujemy szczegółowe systemy monitorowania i alarmowania, które śledzą zużycie energii elektrycznej w czasie rzeczywistym, uwzględniając indywidualne obciążenia, zachowania i profile kosztów. To umożliwia lepszą kontrolę nad konsumentami i wykorzystaniem energii.",
+        "Oferujemy szczegółowe systemy monitorowania i alarmowania, które śledzą zużycie energii elektrycznej w czasie rzeczywistym, uwzględniając indywidualne obciążenia, zachowania i profile kosztów. To umożliwia lepszą kontrolę nad odbiornikami i wykorzystaniem energii.",
     },
     {
       icon: Network,
@@ -201,7 +200,7 @@ const AnalizatorEnergiiOnlinePage = () => {
       icon: Loader2,
       title: "Predykcyjne Utrzymanie Ruchu",
       description:
-        "Poprzez monitorowanie systemów zasilanych energią elektryczną, wykorzystujemy techniki predykcyjnego utrzymania ruchu do przewidywania potencjalnych problemów i unikania awarii, zwiększając efektywność i redukując przestoje.",
+        "Poprzez monitorowanie systemów zasilanych energią elektryczną, wykorzystujemy techniki produkcyjnego utrzymania ruchu do przewidywania potencjalnych problemów i unikania awarii, zwiększając efektywność i redukując przestoje.",
     },
   ];
 
