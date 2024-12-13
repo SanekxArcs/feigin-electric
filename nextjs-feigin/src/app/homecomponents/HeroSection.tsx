@@ -35,7 +35,7 @@ const HeroSection = () => {
           <Image
             src={FeiginElectricLogo}
             alt="Feigin Electric"
-            className="w-[80vw]  h-auto "
+            className="w-[80vw] hidden md:block  h-auto "
           />
         </motion.div>
         <motion.div
