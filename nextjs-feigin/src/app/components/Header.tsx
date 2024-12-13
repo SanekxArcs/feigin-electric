@@ -7,7 +7,7 @@ import NavItem from "./NavItem";
 import { Button } from "@/components/ui/button";
 import { MonitorCog, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
+import FeiginElectricLogo from "../assets/FeiginElectricLogo2.svg";
 import plFlag from "../assets/flag/pl.svg";
 import enFlag from "../assets/flag/en.svg";
 import { useToast } from "@/hooks/use-toast";

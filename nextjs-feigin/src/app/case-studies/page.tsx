@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import { StaticImageData } from "next/image";
-import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
+import FeiginElectricLogo from "../assets/FeiginElectricLogo2.svg";
 
 import SiaHuatLogo from "../assets/cases/logos/siahuat-logo.png";
 import BurgerKingLogo from "../assets/cases/logos/Burger_King_2020.svg";

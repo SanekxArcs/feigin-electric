@@ -66,32 +66,22 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="pl">
         <Head>
+          <meta name="apple-mobile-web-app-title" content="FeiginElectric" />
           <link
-            rel="icon"
-            type="image/png"
-            href="/favicon-96x96.png"
-            sizes="96x96"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+            rel="stylesheet"
           />
-          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-          />
-          <meta name="apple-mobile-web-app-title" content="Feigin Electric" />
-          <link rel="manifest" href="/site.webmanifest" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
         </Head>
         <body
           className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
         >
           <Header />
-          <main className="flex-grow">{children} <Toaster /></main>
-          
+          <main className="flex-grow">
+            {children} <Toaster />
+          </main>
+
           <Footer />
           <ScrollToTopButton />
-          
         </body>
       </html>
     </ViewTransitions>

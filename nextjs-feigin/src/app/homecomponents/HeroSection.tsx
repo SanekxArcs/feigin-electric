@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import backgroundSvg from "../assets/home/hero waves.svg";
-import FeiginElectricLogo from "../assets/FeiginElectricLogo.svg";
+import FeiginElectricLogo from "../assets/FeiginElectricLogo2.svg";
 import { TransitionLink } from "../components/utils/TransitionLink";
 
 const plLang = {
@@ -25,17 +25,16 @@ const HeroSection = () => {
         />
       </div>
       <div className="container mx-auto px-6 flex flex-col items-center justify-center h-[90vh] relative z-10">
-        
         <Image
           src={FeiginElectricLogo}
           alt="Feigin Electric"
-          className="h-32 w-auto md:h-48 lg:h-64"
+          className="w-[80vw] hidden md:block h-auto  fade-in"
         />
-        <div className="flex flex-col items-end w-full  md:w-3/4 lg:w-2/3">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-right text-fgreen-800 mb-4 md:mb-6 select-none">
+        <div className="flex flex-col items-center w-full  md:w-3/4 lg:w-2/3 pt-20">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-start text-fgreen-800 mb-4 md:mb-6 select-none">
             {plLang.title}
           </h1>
-          <p className="text-base text-balance md:text-lg lg:text-xl text-right mb-6 md:mb-8 select-none">
+          <p className="text-base text-balance md:text-lg lg:text-xl text-start mb-6 md:mb-8 select-none">
             {plLang.description}
           </p>
           <TransitionLink href="/products">

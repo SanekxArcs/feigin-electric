@@ -2,10 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import ECODSmartOptimizer from "../assets/home/ecod.webp";
-import ECODSmartOptimizerBlackLeft from "../assets/ecod_2024-Nov-20_11-42-51AM-000_CustomizedView26146391363.webp";
-import ECODSmartOptimizerBlackRight from "../assets/ecod_2024-Nov-20_11-43-34AM-000_CustomizedView3945704262.webp";
-import ECODSmartOptimizerBlackFront from "../assets/70e166d5-2fae-4e73-b7d0-6da4f1434673.webp";
+import ECODSmartOptimizerBlackRight from "../assets/ECOD.webp";
 
 import Acrel from "../assets/home/wireless-electricity-monitor.webp";
 import { TransitionLink } from "../components/utils/TransitionLink";
@@ -73,8 +70,10 @@ const ProductsSection = () => {
           <div className="relative md:w-1/2 w-full flex justify-center items-center">
             <Image
               src={ECODSmartOptimizerBlackRight}
-              alt="Feigin Electric"
-              className="h-72 w-full md:w-auto object-contain"
+              alt="Feigin Electric ECOD Smart Optimizer"
+              quality={99}
+              placeholder="empty"
+              className="h-64 w-full md:w-auto object-contain"
             />
             <div className="absolute inset-0 flex justify-center items-center -z-10">
               <div className="bg-fred-100 rounded-full w-72 h-72 md:w-96 md:h-96 animate-pulse anim"></div>
