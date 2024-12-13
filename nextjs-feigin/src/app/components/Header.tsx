@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -48,7 +49,12 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <TransitionLink href="/">
               <Image
                 className="hover:drop-shadow-xl transition-transform hover:scale-105 h-8 w-auto"
@@ -58,31 +64,47 @@ export default function Header() {
                 alt="Feigin Electric Logo"
               />
             </TransitionLink>
-          </div>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex lg:items-center lg:space-x-6">
             <ul className="flex items-center space-x-4">
-              {navItems.map((item) => (
-                <NavItem
+              {navItems.map((item, index) => (
+                <motion.li
                   key={item.href}
-                  href={item.href}
-                  label={item.label.pl}
-                />
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <NavItem
+                    key={item.href}
+                    href={item.href}
+                    label={item.label.pl}
+                  />
+                </motion.li>
               ))}
             </ul>
             <TransitionLink href="https://ems.feiginelectric.com/">
+            <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+          
               <Button
                 variant="outline"
                 className=" text-fgreen-950 font-semibold transition-all duration-300 hover:text-fgreen-50 rounded-full hover:bg-fgreen-700 ring-1 ring-fgreen-700 ring-offset-2"
               >
                 <MonitorCog className="mr-2 md:mr-0" />
                 <span className="md:hidden xl:block">{plLang.ctaButton}</span>
-              </Button>
+              </Button></motion.div>
             </TransitionLink>
             {/* Language Switcher */}
             <div className="relative flex items-center space-x-4 ">
-              <div className="relative group ">
+              <motion.div className="relative group "initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}>
                 <Button
                   variant="outline"
                   className="flex items-center space-x-2"
@@ -111,7 +133,7 @@ export default function Header() {
                     <span>PL</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </nav>
 

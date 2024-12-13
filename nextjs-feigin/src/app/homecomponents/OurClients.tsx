@@ -18,9 +18,9 @@ const OurPartners = () => {
     <section className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 md:mb-20 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold">
             <HighlightedText title={plLang.title} />
-          </h1>
+          </h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 gap-4">
           {logos.map((icon, index) => (

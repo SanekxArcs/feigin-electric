@@ -1,4 +1,6 @@
 // ProductsSection.tsx
+"use client";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -56,17 +58,29 @@ const ProductsSection = () => {
     <section className="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-10 md:mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-center"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <HighlightedText
               title={plLang.title}
               colorLine="bg-fred-100"
               colorText="text-fred-950"
             />
-          </h2>
+          </motion.h2>
         </div>
 
         {/* Ecod Smart Optimizer */}
-        <div className="product-item flex flex-col md:flex-row items-center mb-16 md:mb-32">
+        <motion.div
+          className="product-item flex flex-col md:flex-row items-center mb-16 md:mb-32"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <div className="relative md:w-1/2 w-full flex justify-center items-center">
             <Image
               src={ECODSmartOptimizerBlackRight}
@@ -82,7 +96,13 @@ const ProductsSection = () => {
             </div>
           </div>
           <div className="md:w-1/2 w-full md:pl-12 mt-6 md:mt-0 text-center md:text-left">
-            <h3 className="text-4xl md:text-6xl font-bold mb-4 select-none">
+            <motion.h3
+              className="text-4xl md:text-6xl font-bold mb-4 select-none"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <span className="text-fred-600">
                 {plLang.products.Ecod.title.first}
               </span>
@@ -90,28 +110,59 @@ const ProductsSection = () => {
                 {plLang.products.Ecod.title.second}
               </span>
               <br /> {plLang.products.Ecod.title.third}
-            </h3>
-            <p className="mb-4 text-lg md:text-xl font-medium text-gray-800 select-none">
+            </motion.h3>
+            <motion.p
+              className="mb-4 text-lg md:text-xl font-medium text-gray-800 select-none"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               {plLang.products.Ecod.description}
-            </p>
-            <ul className="list-disc pl-5 mb-6 text-left space-y-2 text-sm md:text-base select-none">
+            </motion.p>
+            <motion.ul
+              className="list-disc pl-5 mb-6 text-left space-y-2 text-sm md:text-base select-none"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
               {plLang.products.Ecod.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
-            </ul>
+            </motion.ul>
             <TransitionLink href="/ecod-smart-optimizer">
-              <Button className="bg-red-200 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600 px-4 py-2 md:px-6 md:py-3">
-                {plLang.products.Ecod.button}
-                <ChevronRight />
-              </Button>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                viewport={{ once: true }}
+              >
+                <Button className="bg-red-200 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600 px-4 py-2 md:px-6 md:py-3">
+                  {plLang.products.Ecod.button}
+                  <ChevronRight />
+                </Button>
+              </motion.div>
             </TransitionLink>
           </div>
-        </div>
+        </motion.div>
 
         {/* ACREl */}
-        <div className="product-item flex flex-col-reverse md:flex-row items-center my-10 md:my-20">
+        <motion.div
+          className="product-item flex flex-col-reverse md:flex-row items-center my-10 md:my-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <div className="md:w-1/2 w-full md:pl-12 mt-6 md:mt-0 text-center md:text-left">
-            <h3 className="text-4xl md:text-6xl font-bold mb-4 select-none">
+            <motion.h3
+              className="text-4xl md:text-6xl font-bold mb-4 select-none"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <span className="text-fred-600">
                 {plLang.products.Acrel.title.first}
               </span>
@@ -119,19 +170,38 @@ const ProductsSection = () => {
                 {plLang.products.Acrel.title.second}
               </span>
               <br /> {plLang.products.Acrel.title.third}
-            </h3>
-            <p className="mb-4 text-lg md:text-xl font-medium select-none">
+            </motion.h3>
+            <motion.p
+              className="mb-4 text-lg md:text-xl font-medium select-none"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               {plLang.products.Acrel.description}
-            </p>
-            <ul className="list-disc  text-left pl-5 mb-6 space-y-2 text-sm md:text-base  select-none">
+            </motion.p>
+            <motion.ul
+              className="list-disc  text-left pl-5 mb-6 space-y-2 text-sm md:text-base  select-none"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
               {plLang.products.Acrel.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
-            </ul>
+            </motion.ul>
             <TransitionLink href="/feigin-analizator-energii-online">
-              <Button className="bg-red-200 px-4 py-2 md:px-6 md:py-3 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600">
-                {plLang.products.Acrel.button} <ChevronRight />
-              </Button>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                viewport={{ once: true }}
+              >
+                <Button className="bg-red-200 px-4 py-2 md:px-6 md:py-3 text-fred-900 font-semibold transition-all duration-300 hover:text-fred-50 rounded-full hover:bg-red-500 hover:ring-1 ring-offset-2 ring-red-600">
+                  {plLang.products.Acrel.button} <ChevronRight />
+                </Button>
+              </motion.div>
             </TransitionLink>
           </div>
           <div className="relative md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
@@ -146,7 +216,7 @@ const ProductsSection = () => {
               <div className="bg-fred-300 rounded-full w-40 h-40 md:w-56 md:h-56 absolute animate-pulse"></div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
