@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import WarningPopup from "./components/WarningPopup";
 import Head from "next/head";
 import { SanityLive } from "@/sanity/live";
 import { ViewTransitions } from "next-view-transitions";
@@ -75,6 +76,7 @@ export default function RootLayout({
         <body
           className={`${interFont.variable} ${interItalic.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
         >
+          <WarningPopup />
           <Header />
           <main className="flex-grow">
             {children} <Toaster />
